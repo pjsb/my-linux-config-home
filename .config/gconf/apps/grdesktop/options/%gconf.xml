@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="usessh" mtime="1413315029" type="bool" value="false"/>
+	<entry name="attconsole" mtime="1413315029" type="bool" value="false"/>
+	<entry name="wmkeybindings" mtime="1413315029" type="bool" value="false"/>
+	<entry name="noencryption" mtime="1413315029" type="bool" value="false"/>
+	<entry name="hidewmdecoration" mtime="1413315029" type="bool" value="true"/>
+	<entry name="motionevt" mtime="1413315029" type="bool" value="true"/>
+	<entry name="bitmapupd" mtime="1413315029" type="bool" value="true"/>
+	<entry name="runprog" mtime="1413315029" type="bool" value="false"/>
+	<entry name="sound" mtime="1413315029" type="int" value="0"/>
+	<entry name="colorsize" mtime="1413315029" type="int" value="2"/>
+	<entry name="keymap" mtime="1413315029" type="string">
+		<stringvalue>de</stringvalue>
+	</entry>
+	<entry name="geometry" mtime="1413315029" type="string">
+		<stringvalue>Vollbild</stringvalue>
+	</entry>
+	<entry name="rdp_protocol" mtime="1413315029" type="int" value="1"/>
+	<entry name="savepw" mtime="1413315029" type="bool" value="true"/>
+	<entry name="domain" mtime="1413315029" type="string">
+		<stringvalue>Attensity</stringvalue>
+	</entry>
+	<entry name="password" mtime="1413315029" type="string">
+		<stringvalue>Kwacha09@</stringvalue>
+	</entry>
+	<entry name="username" mtime="1413315029" type="string">
+		<stringvalue>Peters</stringvalue>
+	</entry>
+	<entry name="hostnames" mtime="1413315029" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>pazuzu</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>molton</stringvalue>
+		</li>
+	</entry>
+	<entry name="showopts" mtime="1443471032" type="bool" value="true"/>
+</gconf>

@@ -1,0 +1,239 @@
+<?xml version="1.0" ?>
+<portholeprefs ver="0.6.1">
+	<window>
+		<main>
+			<width py_type="int">1366</width>
+			<height py_type="int">746</height>
+			<xpos py_type="int">0</xpos>
+			<ypos py_type="int">19</ypos>
+			<hpane py_type="int">304</hpane>
+			<vpane py_type="int">325</vpane>
+			<maximized py_type="bool">True</maximized>
+			<search_desc py_type="bool">False</search_desc>
+			<show_nag_dialog py_type="bool">False</show_nag_dialog>
+		</main>
+		<process>
+			<width py_type="int">300</width>
+			<height py_type="int">350</height>
+			<width_verbose py_type="int">500</width_verbose>
+		</process>
+		<terminal>
+			<width py_type="int">796</width>
+			<height py_type="int">437</height>
+			<width_verbose py_type="int">500</width_verbose>
+			<font py_type="none"/>
+			<all_tabs_use_custom_colors py_type="bool">False</all_tabs_use_custom_colors>
+			<tag>
+				<emerge>
+					<forecolor/>
+					<backcolor>#90ee90</backcolor>
+					<fontweight py_type="int">700</fontweight>
+				</emerge>
+				<fg_blue>
+					<forecolor>darkblue</forecolor>
+					<backcolor/>
+					<fontweight py_type="none"/>
+				</fg_blue>
+				<warning>
+					<forecolor/>
+					<backcolor>#eeee80</backcolor>
+					<fontweight py_type="int">400</fontweight>
+				</warning>
+				<caution>
+					<forecolor/>
+					<backcolor>#c040b0</backcolor>
+					<fontweight py_type="int">400</fontweight>
+				</caution>
+				<fg_white>
+					<forecolor>yellow</forecolor>
+					<backcolor/>
+					<fontweight py_type="none"/>
+				</fg_white>
+				<fg_black>
+					<forecolor>black</forecolor>
+					<backcolor/>
+					<fontweight py_type="none"/>
+				</fg_black>
+				<fg_red>
+					<forecolor>darkred</forecolor>
+					<backcolor/>
+					<fontweight py_type="none"/>
+				</fg_red>
+				<error>
+					<forecolor>#faf0e6</forecolor>
+					<backcolor>#ff0000</backcolor>
+					<fontweight py_type="int">700</fontweight>
+				</error>
+				<bg_black>
+					<forecolor/>
+					<backcolor>black</backcolor>
+					<fontweight py_type="none"/>
+				</bg_black>
+				<bg_red>
+					<forecolor/>
+					<backcolor>darkred</backcolor>
+					<fontweight py_type="none"/>
+				</bg_red>
+				<note>
+					<forecolor>#8b008b</forecolor>
+					<backcolor/>
+					<fontweight py_type="int">400</fontweight>
+				</note>
+				<fg_cyan>
+					<forecolor>blue</forecolor>
+					<backcolor/>
+					<fontweight py_type="none"/>
+				</fg_cyan>
+				<bg_blue>
+					<forecolor/>
+					<backcolor>darkblue</backcolor>
+					<fontweight py_type="none"/>
+				</bg_blue>
+				<bg_magenta>
+					<forecolor/>
+					<backcolor>magenta</backcolor>
+					<fontweight py_type="none"/>
+				</bg_magenta>
+				<bold>
+					<forecolor/>
+					<backcolor/>
+					<fontweight py_type="int">700</fontweight>
+				</bold>
+				<fg_magenta>
+					<forecolor>magenta</forecolor>
+					<backcolor/>
+					<fontweight py_type="none"/>
+				</fg_magenta>
+				<bg_yellow>
+					<forecolor/>
+					<backcolor>brown</backcolor>
+					<fontweight py_type="none"/>
+				</bg_yellow>
+				<fg_green>
+					<forecolor>darkgreen</forecolor>
+					<backcolor/>
+					<fontweight py_type="none"/>
+				</fg_green>
+				<info>
+					<forecolor/>
+					<backcolor>#b0ffff</backcolor>
+					<fontweight py_type="int">400</fontweight>
+				</info>
+				<fg_yellow>
+					<forecolor>brown</forecolor>
+					<backcolor/>
+					<fontweight py_type="none"/>
+				</fg_yellow>
+				<default>
+					<forecolor/>
+					<backcolor/>
+					<fontweight py_type="int">400</fontweight>
+				</default>
+				<light>
+					<forecolor/>
+					<backcolor/>
+					<fontweight py_type="int">300</fontweight>
+				</light>
+				<bg_white>
+					<forecolor/>
+					<backcolor>white</backcolor>
+					<fontweight py_type="none"/>
+				</bg_white>
+				<command>
+					<forecolor>#ffffff</forecolor>
+					<backcolor>#000080</backcolor>
+					<fontweight py_type="int">700</fontweight>
+				</command>
+				<bg_cyan>
+					<forecolor/>
+					<backcolor>blue</backcolor>
+					<fontweight py_type="none"/>
+				</bg_cyan>
+				<linenumber>
+					<forecolor>#0000ff</forecolor>
+					<backcolor/>
+					<fontweight py_type="int">700</fontweight>
+				</linenumber>
+				<bg_green>
+					<forecolor/>
+					<backcolor>darkgreen</backcolor>
+					<fontweight py_type="none"/>
+				</bg_green>
+			</tag>
+		</terminal>
+		<run_dialog>
+			<width py_type="int">400</width>
+			<height py_type="int">120</height>
+			<history item_count="6" py_type="list">
+				<history-1/>
+				<history-2>emerge</history-2>
+				<history-3>ACCEPT_KEYWORDS='~x86' emerge</history-3>
+				<history-4>USE=' ' emerge</history-4>
+				<history-5>ACCEPT_KEYWORDS='~x86' USE=' ' emerge</history-5>
+				<history-6>emerge --help</history-6>
+			</history>
+			<default_history py_type="int">6</default_history>
+			<history_length py_type="int">10</history_length>
+		</run_dialog>
+	</window>
+	<emerge>
+		<options>
+			<pretend py_type="bool">False</pretend>
+			<fetch py_type="bool">False</fetch>
+			<verbose py_type="bool">False</verbose>
+			<update py_type="bool">False</update>
+			<nospinner py_type="bool">True</nospinner>
+			<noreplace py_type="bool">True</noreplace>
+			<oneshot py_type="bool">False</oneshot>
+		</options>
+	</emerge>
+	<advemerge>
+		<showuseflags py_type="bool">True</showuseflags>
+		<showkeywords py_type="bool">True</showkeywords>
+		<show_make_conf_button py_type="bool">False</show_make_conf_button>
+	</advemerge>
+	<views>
+		<upgradable_fg>#0000FF</upgradable_fg>
+		<downgradable_fg>#FA0000</downgradable_fg>
+		<normal_fg>#000000</normal_fg>
+		<normal_bg>#FFFFFF</normal_bg>
+	</views>
+	<summary>
+		<showtable py_type="bool">True</showtable>
+		<showkeywords py_type="bool">True</showkeywords>
+		<showinstalled py_type="bool">True</showinstalled>
+		<showavailable py_type="bool">True</showavailable>
+		<showlongdesc py_type="bool">True</showlongdesc>
+		<showuseflags py_type="bool">True</showuseflags>
+		<showlicense py_type="bool">True</showlicense>
+		<showurl py_type="bool">True</showurl>
+	</summary>
+	<database>
+		<size py_type="int">7000</size>
+	</database>
+	<globals>
+		<LANG>en</LANG>
+		<enable_archlist py_type="bool">False</enable_archlist>
+		<archlist item_count="11" py_type="list">
+			<archlist-1>alpha</archlist-1>
+			<archlist-2>amd64</archlist-2>
+			<archlist-3>arm</archlist-3>
+			<archlist-4>hppa</archlist-4>
+			<archlist-5>ia64</archlist-5>
+			<archlist-6>mips</archlist-6>
+			<archlist-7>ppc</archlist-7>
+			<archlist-8>ppc64</archlist-8>
+			<archlist-9>s390</archlist-9>
+			<archlist-10>sparc</archlist-10>
+			<archlist-11>x86</archlist-11>
+		</archlist>
+		<Sync>emerge --sync</Sync>
+		<Sync_label>Sync</Sync_label>
+		<custom_browser_command>firefox %s</custom_browser_command>
+		<use_custom_browser py_type="bool">False</use_custom_browser>
+		<su>gksudo -g</su>
+	</globals>
+	<plugins>
+		<active_list item_count="0" py_type="list"/>
+	</plugins>
+</portholeprefs>

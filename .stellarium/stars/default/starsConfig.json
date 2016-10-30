@@ -1,0 +1,92 @@
+{
+	"catalogs": [
+	{
+		"checked": true,
+		"checksum": "89b6833280270f0846f2c7dae1e310e0",
+		"count": 0.0050000000000000001,
+		"fileName": "stars_0_0v0_5.cat",
+		"id": "stars0",
+		"magRange": [-2, 6],
+		"sizeMb": 0.10000000000000001
+	}, 
+	{
+		"checked": true,
+		"checksum": "59eeeb88a0939930a7ae1042fb542bdd",
+		"count": 0.021999999999999999,
+		"fileName": "stars_1_0v0_5.cat",
+		"id": "stars1",
+		"magRange": [6, 7.5],
+		"sizeMb": 0.59999999999999998
+	}, 
+	{
+		"checked": true,
+		"checksum": "43e4a39a7198761e675b0f490de8a9ae",
+		"count": 0.14999999999999999,
+		"fileName": "stars_2_0v0_5.cat",
+		"id": "stars2",
+		"magRange": [7.5, 9],
+		"sizeMb": 4.0999999999999996
+	}, 
+	{
+		"checked": true,
+		"checksum": "0b2481f67b0af30dbb027d62761cc061",
+		"count": 0.42999999999999999,
+		"fileName": "stars_3_1v0_3.cat",
+		"id": "stars3",
+		"magRange": [9, 10.5],
+		"sizeMb": 4.0999999999999996
+	}, 
+	{
+		"checked": false,
+		"checksum": "7a3b8b3471a755661b6d3686eb4c7cc2",
+		"count": 1.7,
+		"fileName": "stars_4_1v0_1.cat",
+		"id": "stars4",
+		"magRange": [10.5, 12],
+		"sizeMb": 17,
+		"url": "http://downloads.sourceforge.net/project/stellarium/Extra-data-files/stars4/stars_4_1v0_1.cat"
+	}, 
+	{
+		"checked": false,
+		"checksum": "50e798428d9402766805da5cf0e8e819",
+		"count": 7.0999999999999996,
+		"fileName": "stars_5_2v0_1.cat",
+		"id": "stars5",
+		"magRange": [12, 13.5],
+		"sizeMb": 41,
+		"url": "http://downloads.sourceforge.net/project/stellarium/Extra-data-files/stars5/stars_5_2v0_1.cat"
+	}, 
+	{
+		"checked": false,
+		"checksum": "3005959bf7baca36d266def2fecf36d3",
+		"count": 24.699999999999999,
+		"fileName": "stars_6_2v0_1.cat",
+		"id": "stars6",
+		"magRange": [13.5, 15],
+		"sizeMb": 142,
+		"url": "http://downloads.sourceforge.net/project/stellarium/Extra-data-files/stars6/stars_6_2v0_1.cat"
+	}, 
+	{
+		"checked": false,
+		"checksum": "15f856fb4c7830a71cb8d60e1decc387",
+		"count": 50.799999999999997,
+		"fileName": "stars_7_2v0_1.cat",
+		"id": "stars7",
+		"magRange": [15, 16.5],
+		"sizeMb": 292,
+		"url": "http://downloads.sourceforge.net/project/stellarium/Extra-data-files/stars7/stars_7_2v0_1.cat"
+	}, 
+	{
+		"checked": false,
+		"checksum": "9e2e362022824c60d7e4d94ef8c3af12",
+		"count": 92.299999999999997,
+		"fileName": "stars_8_2v0_1.cat",
+		"id": "stars8",
+		"magRange": [16.5, 18],
+		"sizeMb": 534,
+		"url": "http://downloads.sourceforge.net/project/stellarium/Extra-data-files/stars8/stars_8_2v0_1.cat"
+	}],
+	"hipComponentsIdsFile": "stars_hip_cids_0v0_0.cat",
+	"hipSpectralFile": "stars_hip_sp_0v0_0.cat",
+	"version": 7
+}

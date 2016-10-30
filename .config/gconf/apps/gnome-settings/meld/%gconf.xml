@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="history-fileentry" mtime="1417906661" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>/etc/X11/xorg.conf.fglrx-1</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/etc/default/._cfg0000_grub</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/home/jens/Downloads/attensity.conf</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>/etc/openvpn/attensity.conf</stringvalue>
+		</li>
+	</entry>
+	<entry name="history-vc_directory" mtime="1408833727" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>/home/jens</stringvalue>
+		</li>
+	</entry>
+</gconf>

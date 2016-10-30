@@ -1,0 +1,29 @@
+[global_config]
+  borderless = True
+  custom_url_handler = chromium
+  enabled_plugins = CustomCommandsMenu, TestPlugin, ActivityWatch, TerminalShot
+  title_hide_sizetext = True
+  title_transmit_bg_color = "#000000"
+  use_custom_url_handler = True
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      profile = default
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_darkness = 0.8
+    background_image = None
+    background_type = transparent
+    copy_on_selection = True
+    font = Inconsolata 10
+    scrollback_infinite = True
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False

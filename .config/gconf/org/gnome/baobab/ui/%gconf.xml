@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="window-state" mtime="1412721318" type="int" value="128"/>
+	<entry name="active-chart" mtime="1412721318" type="string">
+		<stringvalue>rings</stringvalue>
+	</entry>
+	<entry name="window-size" mtime="1412721318" type="pair">
+		<car type="int" value="1366"/>
+		<cdr type="int" value="715"/>
+	</entry>
+</gconf>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="entry_max" mtime="1411600474" type="bool" value="false"/>
+	<entry name="entry_width" mtime="1411600474" type="int" value="600"/>
+	<entry name="entry_height" mtime="1411600474" type="int" value="400"/>
+	<entry name="entry_y" mtime="1411600474" type="int" value="0"/>
+	<entry name="entry_x" mtime="1411600474" type="int" value="0"/>
+	<entry name="highlight_syntax" mtime="1413156548" type="bool" value="true"/>
+	<entry name="expander_open" mtime="1413156548" type="bool" value="false"/>
+</gconf>

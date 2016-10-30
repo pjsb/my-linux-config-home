@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="sidebar-width" mtime="1414797500" type="int" value="200"/>
+	<entry name="window-height" mtime="1414797500" type="int" value="692"/>
+	<entry name="window-width" mtime="1414797500" type="int" value="1225"/>
+</gconf>

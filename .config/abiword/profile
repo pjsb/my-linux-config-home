@@ -1,0 +1,153 @@
+<!-- =====================================================================  -->
+<!-- This file contains AbiSuite Preferences.  AbiSuite is a suite of Open  -->
+<!-- Source desktop applications developed by AbiSource, Inc.  Information  -->
+<!-- about this application can be found at http://www.abisource.com        -->
+<!-- You should not edit this file by hand.                                 -->
+<!-- =====================================================================  -->
+
+<!--         Build_ID          = unknown -->
+<!--         Build_Version     = 3.0.1 -->
+<!--         Build_CompileTime = 23:47:55 -->
+<!--         Build_CompileDate = Mar 15 2015 -->
+
+<AbiPreferences app="abiword" ver="1.0">
+
+	<Select
+	    scheme="_custom_"
+	    autosaveprefs="1"
+	    useenvlocale="1"
+	/>
+
+	<!-- The following scheme, _builtin_, contains the built-in application
+	**** defaults and adjusted by the installation system defaults.  This scheme
+	**** is only written here as a reference.  Any schemes following this one
+	**** only list values that deviate from the built-in values.
+	**** Items values must observe XML encoding for double quote (&quot;),
+	**** ampersand (&amp;), and angle brackets (&lt; and &gt;).
+	-->
+
+	<Scheme
+		name="_builtin_"
+		AutoLoadPlugins="1"
+		SmartQuotesEnable="1"
+		ColorRevision2="ab1477"
+		TransparentColor="ffffff"
+		FormatBarVisible="1"
+		ColorHyperLink="0000ff"
+		/>
+
+	<Scheme
+		name="_custom_"
+		ZoomPercentage="210"
+		layoutMode="2"
+		/>
+
+	<Recent
+		max="9"
+		name1="file:///home/jens/MVr/Honoraranordnung.abw"
+		name2="file:///tmp/Honorarvorstellung%20Ivan.doc"
+		name3="file:///tmp/MV-HV-Einladung%202015.05.20.doc"
+		name4="file:///tmp/Dorffestbesprechung-2015.04.16-1.Einladung.doc"
+		name5="file:///home/jens/Downloads/Indiana%20Jones%20&amp;%20the%20Fate%20of%20Atlantis%20Collection%20(1992)/HELPME.DOC"
+		name6="file:///home/jens/Downloads/microsoft-software-licensing-tables.docx"
+		name7="file:///home/jens/Downloads/aslcompiler.doc"
+		name8="file:///home/jens/Downloads/acpica-reference_9.doc"
+		name9="file:///tmp/Orga-Plan%202014.doc"
+		/>
+
+	<Geometry
+		width="1364"
+		height="747"
+		posx="1"
+		posy="146"
+		flags="2"
+		/>
+
+	<Log>
+	<!-- [Di 14 Jul 2015 19:38:57 CEST] message: XAP_ModuleManager::loadModule - (L104): loading /usr/lib64/abiword-3.0/plugins/loadbindings.so -->
+	<!-- [Di 14 Jul 2015 19:38:57 CEST] message: XAP_ModuleManager::loadModule - (L189): success /usr/lib64/abiword-3.0/plugins/loadbindings.so -->
+	<!-- [Di 14 Jul 2015 19:38:57 CEST] message: XAP_ModuleManager::loadModule - (L104): loading /usr/lib64/abiword-3.0/plugins/wikipedia.so -->
+	<!-- [Di 14 Jul 2015 19:38:57 CEST] message: XAP_ModuleManager::loadModule - (L189): success /usr/lib64/abiword-3.0/plugins/wikipedia.so -->
+	<!-- [Di 14 Jul 2015 19:38:57 CEST] message: XAP_ModuleManager::loadModule - (L104): loading /usr/lib64/abiword-3.0/plugins/goffice.so -->
+	<!-- [Di 14 Jul 2015 19:38:57 CEST] message: XAP_ModuleManager::loadModule - (L189): success /usr/lib64/abiword-3.0/plugins/goffice.so -->
+	<!-- [Di 14 Jul 2015 19:38:57 CEST] message: XAP_ModuleManager::loadModule - (L104): loading /usr/lib64/abiword-3.0/plugins/sdw.so -->
+	<!-- [Di 14 Jul 2015 19:38:57 CEST] message: XAP_ModuleManager::loadModule - (L189): success /usr/lib64/abiword-3.0/plugins/sdw.so -->
+	<!-- [Di 14 Jul 2015 19:38:57 CEST] message: XAP_ModuleManager::loadModule - (L104): loading /usr/lib64/abiword-3.0/plugins/applix.so -->
+	<!-- [Di 14 Jul 2015 19:38:57 CEST] message: XAP_ModuleManager::loadModule - (L189): success /usr/lib64/abiword-3.0/plugins/applix.so -->
+	<!-- [Di 14 Jul 2015 19:38:57 CEST] message: XAP_ModuleManager::loadModule - (L104): loading /usr/lib64/abiword-3.0/plugins/garble.so -->
+	<!-- [Di 14 Jul 2015 19:38:57 CEST] message: XAP_ModuleManager::loadModule - (L189): success /usr/lib64/abiword-3.0/plugins/garble.so -->
+	<!-- [Di 14 Jul 2015 19:38:57 CEST] message: XAP_ModuleManager::loadModule - (L104): loading /usr/lib64/abiword-3.0/plugins/eml.so -->
+	<!-- [Di 14 Jul 2015 19:38:57 CEST] message: XAP_ModuleManager::loadModule - (L189): success /usr/lib64/abiword-3.0/plugins/eml.so -->
+	<!-- [Di 14 Jul 2015 19:38:57 CEST] message: XAP_ModuleManager::loadModule - (L104): loading /usr/lib64/abiword-3.0/plugins/opendocument.so -->
+	<!-- [Di 14 Jul 2015 19:38:57 CEST] message: XAP_ModuleManager::loadModule - (L189): success /usr/lib64/abiword-3.0/plugins/opendocument.so -->
+	<!-- [Di 14 Jul 2015 19:38:57 CEST] message: XAP_ModuleManager::loadModule - (L104): loading /usr/lib64/abiword-3.0/plugins/mswrite.so -->
+	<!-- [Di 14 Jul 2015 19:38:57 CEST] message: XAP_ModuleManager::loadModule - (L189): success /usr/lib64/abiword-3.0/plugins/mswrite.so -->
+	<!-- [Di 14 Jul 2015 19:38:57 CEST] message: XAP_ModuleManager::loadModule - (L104): loading /usr/lib64/abiword-3.0/plugins/freetranslation.so -->
+	<!-- [Di 14 Jul 2015 19:38:57 CEST] message: XAP_ModuleManager::loadModule - (L189): success /usr/lib64/abiword-3.0/plugins/freetranslation.so -->
+	<!-- [Di 14 Jul 2015 19:38:57 CEST] message: XAP_ModuleManager::loadModule - (L104): loading /usr/lib64/abiword-3.0/plugins/babelfish.so -->
+	<!-- [Di 14 Jul 2015 19:38:57 CEST] message: XAP_ModuleManager::loadModule - (L189): success /usr/lib64/abiword-3.0/plugins/babelfish.so -->
+	<!-- [Di 14 Jul 2015 19:38:57 CEST] message: XAP_ModuleManager::loadModule - (L104): loading /usr/lib64/abiword-3.0/plugins/hrtext.so -->
+	<!-- [Di 14 Jul 2015 19:38:57 CEST] message: XAP_ModuleManager::loadModule - (L189): success /usr/lib64/abiword-3.0/plugins/hrtext.so -->
+	<!-- [Di 14 Jul 2015 19:38:57 CEST] message: XAP_ModuleManager::loadModule - (L104): loading /usr/lib64/abiword-3.0/plugins/s5.so -->
+	<!-- [Di 14 Jul 2015 19:38:57 CEST] message: XAP_ModuleManager::loadModule - (L189): success /usr/lib64/abiword-3.0/plugins/s5.so -->
+	<!-- [Di 14 Jul 2015 19:38:57 CEST] message: XAP_ModuleManager::loadModule - (L104): loading /usr/lib64/abiword-3.0/plugins/opml.so -->
+	<!-- [Di 14 Jul 2015 19:38:57 CEST] message: XAP_ModuleManager::loadModule - (L189): success /usr/lib64/abiword-3.0/plugins/opml.so -->
+	<!-- [Di 14 Jul 2015 19:38:57 CEST] message: XAP_ModuleManager::loadModule - (L104): loading /usr/lib64/abiword-3.0/plugins/kword.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L189): success /usr/lib64/abiword-3.0/plugins/kword.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L104): loading /usr/lib64/abiword-3.0/plugins/urldict.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L189): success /usr/lib64/abiword-3.0/plugins/urldict.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L104): loading /usr/lib64/abiword-3.0/plugins/xslfo.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L189): success /usr/lib64/abiword-3.0/plugins/xslfo.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L104): loading /usr/lib64/abiword-3.0/plugins/hancom.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L189): success /usr/lib64/abiword-3.0/plugins/hancom.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L104): loading /usr/lib64/abiword-3.0/plugins/openxml.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L189): success /usr/lib64/abiword-3.0/plugins/openxml.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L104): loading /usr/lib64/abiword-3.0/plugins/iscii.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L189): success /usr/lib64/abiword-3.0/plugins/iscii.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L104): loading /usr/lib64/abiword-3.0/plugins/google.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L189): success /usr/lib64/abiword-3.0/plugins/google.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L104): loading /usr/lib64/abiword-3.0/plugins/bmp.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L189): success /usr/lib64/abiword-3.0/plugins/bmp.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L104): loading /usr/lib64/abiword-3.0/plugins/passepartout.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L189): success /usr/lib64/abiword-3.0/plugins/passepartout.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L104): loading /usr/lib64/abiword-3.0/plugins/pdb.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L189): success /usr/lib64/abiword-3.0/plugins/pdb.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L104): loading /usr/lib64/abiword-3.0/plugins/clarisworks.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L189): success /usr/lib64/abiword-3.0/plugins/clarisworks.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L104): loading /usr/lib64/abiword-3.0/plugins/presentation.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L189): success /usr/lib64/abiword-3.0/plugins/presentation.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L104): loading /usr/lib64/abiword-3.0/plugins/pdf.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L189): success /usr/lib64/abiword-3.0/plugins/pdf.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L104): loading /usr/lib64/abiword-3.0/plugins/mif.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L189): success /usr/lib64/abiword-3.0/plugins/mif.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L104): loading /usr/lib64/abiword-3.0/plugins/openwriter.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L189): success /usr/lib64/abiword-3.0/plugins/openwriter.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L104): loading /usr/lib64/abiword-3.0/plugins/t602.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L189): success /usr/lib64/abiword-3.0/plugins/t602.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L104): loading /usr/lib64/abiword-3.0/plugins/gimp.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L189): success /usr/lib64/abiword-3.0/plugins/gimp.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L104): loading /usr/lib64/abiword-3.0/plugins/docbook.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L189): success /usr/lib64/abiword-3.0/plugins/docbook.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L104): loading /usr/lib64/abiword-3.0/plugins/command.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L189): success /usr/lib64/abiword-3.0/plugins/command.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L104): loading /usr/lib64/abiword-3.0/plugins/gdict.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L189): success /usr/lib64/abiword-3.0/plugins/gdict.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L104): loading /usr/lib64/abiword-3.0/plugins/wml.so -->
+	<!-- [Di 14 Jul 2015 19:38:58 CEST] message: XAP_ModuleManager::loadModule - (L189): success /usr/lib64/abiword-3.0/plugins/wml.so -->
+	</Log>
+
+	<Fonts include="0">
+	<!--
+	     Here you can put a list of fonts to limit the fonts that appear 
+	     in the font UI:
+
+		<Face name="some face"/>
+
+	     The include attribute of 'Fonts' controls the significance of 
+	     the list:
+	     include="1" - limit fonts to those listed
+	     include="0" - exclude the listed fonts from the system font list
+	-->
+	</Fonts>
+
+</AbiPreferences>

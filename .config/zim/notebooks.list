@@ -1,0 +1,9 @@
+[NotebookList]
+Default=~/GoogleDrive/Todos
+1=~/GoogleDrive/Todos
+
+[Notebook 1]
+uri=~/GoogleDrive/Todos
+name=Todos
+interwiki=None
+icon=None

@@ -1,0 +1,197 @@
+{
+  "ea022e70-4bad-4fbf-a34a-b6bb3db5ad64": {
+    "3f243a81-4571-471b-b384-ebbae3fc10d5": {
+      "Rows": {
+        "publisher": {
+          "suffix": "", 
+          "column": "Verlag", 
+          "prefix": "", 
+          "split_char": "", 
+          "ignore": [
+            ""
+          ], 
+          "rename_from": "", 
+          "minimum": "", 
+          "action": "", 
+          "include": [
+            ""
+          ], 
+          "rename_to": ""
+        }, 
+        "#tags": {
+          "suffix": "", 
+          "column": "Tags", 
+          "prefix": "", 
+          "split_char": "", 
+          "ignore": [
+            ""
+          ], 
+          "rename_from": "", 
+          "minimum": "", 
+          "action": "Create", 
+          "include": [
+            ""
+          ], 
+          "rename_to": ""
+        }, 
+        "tags": {
+          "suffix": "", 
+          "column": "Schlagw\u00f6rter", 
+          "prefix": "", 
+          "split_char": "", 
+          "ignore": [
+            ""
+          ], 
+          "rename_from": "", 
+          "minimum": "", 
+          "action": "", 
+          "include": [
+            ""
+          ], 
+          "rename_to": ""
+        }, 
+        "user_categories": {
+          "suffix": "", 
+          "column": "User Categories", 
+          "prefix": "", 
+          "split_char": "", 
+          "ignore": [
+            ""
+          ], 
+          "rename_from": "", 
+          "minimum": "", 
+          "action": "", 
+          "include": [
+            ""
+          ], 
+          "rename_to": ""
+        }, 
+        "series": {
+          "suffix": "", 
+          "column": "Serie", 
+          "prefix": "", 
+          "split_char": "", 
+          "ignore": [
+            ""
+          ], 
+          "rename_from": "", 
+          "minimum": "", 
+          "action": "", 
+          "include": [
+            ""
+          ], 
+          "rename_to": ""
+        }, 
+        "author_sort": {
+          "suffix": "", 
+          "column": "Author Sort", 
+          "prefix": "", 
+          "split_char": "", 
+          "ignore": [
+            ""
+          ], 
+          "rename_from": "", 
+          "minimum": "", 
+          "action": "", 
+          "include": [
+            ""
+          ], 
+          "rename_to": ""
+        }, 
+        "#optimized": {
+          "suffix": "", 
+          "column": "Optimized", 
+          "prefix": "", 
+          "split_char": "", 
+          "ignore": [
+            ""
+          ], 
+          "rename_from": "", 
+          "minimum": "", 
+          "action": "", 
+          "include": [
+            ""
+          ], 
+          "rename_to": ""
+        }, 
+        "authors": {
+          "suffix": "", 
+          "column": "Autoren", 
+          "prefix": "", 
+          "split_char": "", 
+          "ignore": [
+            ""
+          ], 
+          "rename_from": "", 
+          "minimum": "", 
+          "action": "", 
+          "include": [
+            ""
+          ], 
+          "rename_to": ""
+        }, 
+        "timestamp": {
+          "suffix": "", 
+          "column": "Datum", 
+          "prefix": "", 
+          "split_char": "", 
+          "ignore": [
+            ""
+          ], 
+          "rename_from": "", 
+          "minimum": "", 
+          "action": "", 
+          "include": [
+            ""
+          ], 
+          "rename_to": ""
+        }, 
+        "title": {
+          "suffix": "", 
+          "column": "Titel", 
+          "prefix": "", 
+          "split_char": "", 
+          "ignore": [
+            ""
+          ], 
+          "rename_from": "", 
+          "minimum": "", 
+          "action": "", 
+          "include": [
+            ""
+          ], 
+          "rename_to": ""
+        }, 
+        "#formats": {
+          "suffix": "", 
+          "column": "Formate", 
+          "prefix": "", 
+          "split_char": "", 
+          "ignore": [
+            ""
+          ], 
+          "rename_from": "", 
+          "minimum": "", 
+          "action": "", 
+          "include": [
+            ""
+          ], 
+          "rename_to": ""
+        }
+      }, 
+      "Settings": {
+        "ignore_case": true, 
+        "reset_collection_times": true, 
+        "ignore_prefix_suffix": true, 
+        "ignore_all": [
+          ""
+        ], 
+        "ignore_json_db": false, 
+        "store_version": "1", 
+        "force_touch_model": false, 
+        "keep_kindle_only": true, 
+        "fast_reboot": true
+      }
+    }
+  }
+}

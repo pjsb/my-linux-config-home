@@ -1,0 +1,5 @@
+colorscheme:jplog
+cs_re:green:INFO
+cs_re:red:SEVERE
+cs_re:red:ERROR
+cs_re:yellow:WARN

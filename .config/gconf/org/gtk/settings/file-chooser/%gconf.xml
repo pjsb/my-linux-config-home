@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="sort-column" mtime="1414011218" type="string">
+		<stringvalue>name</stringvalue>
+	</entry>
+	<entry name="sidebar-width" mtime="1414011218" type="int" value="148"/>
+	<entry name="show-size-column" mtime="1414011218" type="bool" value="true"/>
+	<entry name="window-position" mtime="1414011218" type="pair">
+		<car type="int" value="536"/>
+		<cdr type="int" value="130"/>
+	</entry>
+	<entry name="window-size" mtime="1414011218" type="pair">
+		<car type="int" value="830"/>
+		<cdr type="int" value="638"/>
+	</entry>
+	<entry name="sort-order" mtime="1414011218" type="string">
+		<stringvalue>ascending</stringvalue>
+	</entry>
+	<entry name="show-hidden" mtime="1414011218" type="bool" value="false"/>
+	<entry name="location-mode" mtime="1414011218" type="string">
+		<stringvalue>filename-entry</stringvalue>
+	</entry>
+</gconf>

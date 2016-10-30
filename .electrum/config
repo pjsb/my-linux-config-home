@@ -1,0 +1,67 @@
+{
+    "auto_connect": true, 
+    "column_widths_2": {
+        "contacts": [
+            350, 
+            330
+        ], 
+        "history": [
+            40, 
+            140, 
+            350, 
+            140
+        ], 
+        "receive": [
+            370, 
+            200, 
+            130, 
+            132
+        ]
+    }, 
+    "console-history": [], 
+    "currency": "EUR", 
+    "gui_last_wallet": "/home/jens/.electrum/wallets/default_wallet", 
+    "gui_show_history": false, 
+    "gui_show_receiving": false, 
+    "is_maximized": false, 
+    "lite_mode": false, 
+    "protocol": "s", 
+    "proxy": null, 
+    "recent_servers": [
+        "electrum.grnbrg.org:50002:s", 
+        "ecdsa.net:110:s", 
+        "electrum.no-ip.org:50002:s", 
+        "electrum.0x0000.de:50002:s", 
+        "electrum2.grnbrg.org:50002:s", 
+        "electrum.hsmiths.com:50002:s", 
+        "eco-electrum.ddns.net:50002:s", 
+        "electrum.drollette.com:50002:s", 
+        "bitcoin.epicinet.net:50002:s", 
+        "electrum.gotgeeks.com:50002:s", 
+        "kirsche.emzy.de:50002:s", 
+        "electrum2.hachre.de:50002:s", 
+        "WEST.electrum.jdubya.info:50002:s", 
+        "electrum.thwg.org:50002:s", 
+        "electrum.webhop.me:50002:s", 
+        "erbium1.sytes.net:50002:s", 
+        "electrum.haskoin.com:50002:s", 
+        "electrum.stepkrav.pw:50002:s", 
+        "erbium.sytes.net:50002:s", 
+        "ecdsa.net:50002:s"
+    ], 
+    "recently_open": [
+        "/home/jens/.electrum/wallets/default_wallet"
+    ], 
+    "server": "elec.luggs.co:443:s", 
+    "use_exchange": "LocalBitcoins", 
+    "use_exchange_rate": true, 
+    "use_labels": false, 
+    "use_pointofsale": true, 
+    "use_virtualkeyboard": true, 
+    "winpos-qt": [
+        221, 
+        133, 
+        723, 
+        454
+    ]
+}

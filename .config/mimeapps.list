@@ -1,0 +1,19 @@
+[Default Applications]
+video/x-ms-wmv=userapp-mplayer-9TU9GX.desktop
+video/mpeg=vlc.desktop
+application/pdf=userapp-mupdf-Q5HAOY.desktop
+
+[Added Associations]
+video/x-ms-wmv=userapp-mplayer-9TU9GX.desktop;
+text/plain=geany.desktop;
+inode/directory=exo-file-manager.desktop
+x-scheme-handler/trash=exo-file-manager.desktop
+application/x-ms-dos-executable=org.gnome.FileRoller.desktop;
+application/zip=org.gnome.FileRoller.desktop;
+video/mp4=vlc.desktop;
+video/mpeg=org.gnome.Totem.desktop;vlc.desktop;
+application/x-cd-image=org.gnome.FileRoller.desktop;
+application/pdf=userapp-chrome-XL9HOY.desktop;calibre-gui.desktop;userapp-mupdf-Q5HAOY.desktop;
+image/svg+xml=ristretto.desktop;
+image/jpeg=ristretto.desktop;wine-extension-jfif.desktop;
+text/x-lua=geany.desktop;

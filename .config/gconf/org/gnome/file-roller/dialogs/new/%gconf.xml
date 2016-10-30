@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="default-extension" mtime="1404855775" type="string">
+		<stringvalue>.zip</stringvalue>
+	</entry>
+	<entry name="volume-size" mtime="1404855775" type="int" value="104857"/>
+	<entry name="encrypt-header" mtime="1404855775" type="bool" value="false"/>
+</gconf>
