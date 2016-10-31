@@ -44,8 +44,15 @@ conky.config={
   gap_y=40,
   alignment="top_right",
   use_spacer="left",
-  no_buffers=true
+  no_buffers=true,
+  xinerama_head=2
 }
+
+work = "D-SLS-PC-L01-JP"
+lan  = "wlp9s0"
+if work == nodename then
+  lan = "enp3s0"
+end
 
 --[[
 ${alignc}
@@ -91,7 +98,7 @@ ${fs_bar 8 /media/local}
 ${color white}/media/data${alignr}${fs_used /media/data} / ${fs_size /media/data}
 ${fs_bar 8 /media/data}
 ${color yellow}$hr
-${color yellow}wlp9s0 ${alignr}${addr wlp9s0}
+${color yellow}${lan} ${alignr}${addr wlp9s0}
 ${color yellow}$hr
 ${color white}${downspeedgraph wlp9s0 32,120 yellow yellow}${upspeedgraph wlp9s0 32,120 yellow yellow}
 ${color white}Down: ${downspeed wlp9s0} k/s${alignr}Up: ${upspeed wlp9s0} k/s
