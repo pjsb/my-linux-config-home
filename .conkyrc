@@ -45,13 +45,16 @@ conky.config={
   alignment="top_right",
   use_spacer="left",
   no_buffers=true,
-  xinerama_head=2
+  xinerama_head=2,
+
+  template0='${color yellow}wlp9s0 ${alignr}${addr wlp9s0}',
+  template1='${color yellow}enp3s0 ${alignr}${addr enp3s0}'
 }
 
 work = "D-SLS-PC-L01-JP"
 lan  = "wlp9s0"
 if work == nodename then
-  lan = "enp3s0"
+ lan = "enp3s0"
 end
 
 --[[
@@ -65,20 +68,24 @@ ${time %a %d. %b %k:%M}
 
 conky.text = [[
 ${color yellow}${nodename}${alignr}${kernel}
+$hr
+CPU - ${freq} Hz${color white}${alignr}$loadavg
 ${color yellow}$hr
-${color yellow}CPU - ${freq} Hz${color white}${alignr}$loadavg
-${color yellow}$hr
-${color white}\#1 : ${cpugraph cpu0 10 yellow yellow}
-${color white}\#2 : ${cpugraph cpu1 10 yellow yellow}
-${color white}\#3 : ${cpugraph cpu2 10 yellow yellow}
-${color white}\#4 : ${cpugraph cpu3 10 yellow yellow}
-${color white}Processes: $running_processes (running) / $processes (total)
-${color yellow}$hr
-${color yellow}Sensors
-${color yellow}$hr
+\#1 : ${cpugraph cpu0 10 yellow yellow}
+\#2 : ${cpugraph cpu1 10 yellow yellow}
+\#3 : ${cpugraph cpu2 10 yellow yellow}
+\#4 : ${cpugraph cpu3 10 yellow yellow}
+${color white}\
+Processes: $running_processes (running) / $processes (total)
+${color yellow}\
+$hr
+Sensors
+$hr
 ${color white}CPU${alignr}${execi 60 sensors | grep -A 0 'Physical id 0' | cut -c18-19} °C
 ${color white}System${alignr}${acpitemp} °C
-${color white}Radeon${alignr}${execi 60 sensors | grep -A 2 'radeon-pci-0100' | cut -c16-17 | tail -1} °C
+${if_match "${nodename}" != "${work}"}${color white}Radeon${alignr}\
+  ${execi 60 sensors | grep -A 2 'radeon-pci-0100' | cut -c16-17 | tail -1} °C\
+${endif}
 ${color yellow}$hr
 ${color yellow}Memory
 ${color yellow}$hr
@@ -101,7 +108,7 @@ ${fs_bar 8 /media/local}
 ${color white}/media/data${alignr}${fs_used /media/data} / ${fs_size /media/data}
 ${fs_bar 8 /media/data}
 ${color yellow}$hr
-${color yellow}$lan ${alignr}${addr wlp9s0}
+${if_match "${nodename}" != "${work}"}${template0}${else}${template1}${endif}
 ${color yellow}$hr
 ${color white}${downspeedgraph wlp9s0 32,120 yellow yellow}${upspeedgraph wlp9s0 32,120 yellow yellow}
 ${color white}Down: ${downspeed wlp9s0} k/s${alignr}Up: ${upspeed wlp9s0} k/s
