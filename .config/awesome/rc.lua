@@ -467,3 +467,4 @@ naughty.notify{
 
 -- ########################## Autostart #########################################
 awful.util.spawn_with_shell("conky -d")
+awful.util.spawn_with_shell("xfce4-power-manager")

@@ -1,61 +1,79 @@
-conky.config={
-  background=true,
-  cpu_avg_samples=2,
-  net_avg_samples=2,
-  out_to_console=false,
-  update_interval=2,
-
-  use_xft=true,
-  font="Source Code Pro Mono:size=8",
-  xftalpha=0.8,
-
-  own_window=false,
-  own_window_transparent=false,
-  own_window_colour="ffffff",
-  own_window_type="desktop",
-  own_window_hints="undecorated,below,skip_taskbar",
-  double_buffer=true,
-  default_graph_height=true,
-
-  maximum_width=450,
-  minimum_width=230,
-
-  draw_shades=true,
-  draw_outline=false,
-  draw_borders=true,
-  stippled_borders=0,
-  border_outer_margin=2,
-  --border_inner_margin=4,
-  pad_percents=0.2,
-  border_width=1,
-  short_units=true,
-
-  default_color="white",
-  default_shade_color="white",
-  default_outline_color="white",
-  default_bar_height=6,
-  default_bar_width=0,
-  default_gauge_height=25,
-  default_gauge_width=40,
-  default_graph_height=25,
-  default_graph_width=0,
-
-  gap_x=15,
-  gap_y=40,
-  alignment="top_right",
-  use_spacer="left",
-  no_buffers=true,
-  xinerama_head=2,
-
-  template0='${color yellow}wlp9s0 ${alignr}${addr wlp9s0}',
-  template1='${color yellow}enp3s0 ${alignr}${addr enp3s0}'
-}
-
-work = "D-SLS-PC-L01-JP"
-lan  = "wlp9s0"
-if work == nodename then
- lan = "enp3s0"
+if "D-SLS-PC-L01-JP" == nodename then
+  lan = "enp3s0"
+  mounts = {"/", "/tmp", "/home", "nbcache"}
+elseif "pv01.home" then
+  lan = "wlp9s0"
+  mounts = {"/", "/tmp", "/home", "/media/local", "/media/data"}
 end
+
+function dirGraphs()
+  local tplString = ""
+  for i, mount in ipairs(mounts) do
+    tplString = tplString .. string.format([[${color white}%s\
+${alignr} ${fs_used %s} / ${fs_size %s}
+${fs_bar 8 %s}
+]], mount,mount,mount,mount)
+  end
+  return tplString
+end
+
+conky.config={
+background=true,
+cpu_avg_samples=2,
+net_avg_samples=2,
+out_to_console=false,
+update_interval=2,
+
+use_xft=true,
+font="Source Code Pro Mono:size=8",
+xftalpha=0.8,
+
+own_window=false,
+own_window_transparent=false,
+own_window_colour="ffffff",
+own_window_type="desktop",
+own_window_hints="undecorated,below,skip_taskbar",
+double_buffer=true,
+default_graph_height=true,
+
+maximum_width=450,
+minimum_width=230,
+
+draw_shades=true,
+draw_outline=false,
+draw_borders=true,
+stippled_borders=0,
+border_outer_margin=2,
+--border_inner_margin=4,
+pad_percents=0.2,
+border_width=1,
+short_units=true,
+
+default_color="white",
+default_shade_color="white",
+default_outline_color="white",
+default_bar_height=6,
+default_bar_width=0,
+default_gauge_height=25,
+default_gauge_width=40,
+default_graph_height=25,
+default_graph_width=0,
+
+gap_x=15,
+gap_y=40,
+alignment="top_right",
+use_spacer="left",
+no_buffers=true,
+xinerama_head=2,
+
+template0=[[
+${color yellow}\1${alignr}${addr \1}
+${color white}${downspeedgraph \1 32,120 yellow yellow}${upspeedgraph \1 32,120 yellow yellow}
+${color white}Down: ${downspeed \1} k/s${alignr}Up: ${upspeed \1} k/s
+${color white}Total: ${totaldown \1}${alignr}Total: ${totalup \1}
+]],
+template1=[[\1]]
+}
 
 --[[
 ${alignc}
@@ -69,7 +87,7 @@ ${time %a %d. %b %k:%M}
 conky.text = [[
 ${color yellow}${nodename}${alignr}${kernel}
 $hr
-CPU - ${freq} Hz${color white}${alignr}$loadavg
+CPU - ${freq} Hz ${alignr}$loadavg
 ${color yellow}$hr
 \#1 : ${cpugraph cpu0 10 yellow yellow}
 \#2 : ${cpugraph cpu1 10 yellow yellow}
@@ -82,10 +100,8 @@ $hr
 Sensors
 $hr
 ${color white}CPU${alignr}${execi 60 sensors | grep -A 0 'Physical id 0' | cut -c18-19} °C
-${color white}System${alignr}${acpitemp} °C
-${if_match "${nodename}" != "${work}"}${color white}Radeon${alignr}\
-  ${execi 60 sensors | grep -A 2 'radeon-pci-0100' | cut -c16-17 | tail -1} °C\
-${endif}
+System${alignr}${acpitemp} °C
+Radeon ${alignr}${execi 60 sensors | grep -A 2 'radeon-pci-0100' | cut -c16-17 | tail -1} °C
 ${color yellow}$hr
 ${color yellow}Memory
 ${color yellow}$hr
@@ -97,20 +113,6 @@ ${color yellow}$hr
 ${color yellow}Disk
 ${color yellow}$hr
 ${color white}${diskiograph /dev/sda 8 yellow yellow}
-${color white}/${alignr}${fs_used /} / ${fs_size /}
-${fs_bar 8 /}
-${color white}/tmp${alignr}${fs_used /tmp} / ${fs_size /tmp}
-${fs_bar 8 /tmp}
-${color white}/home${alignr}${fs_used /home} / ${fs_size /home}
-${fs_bar 8 /home}
-${color white}/media/local${alignr}${fs_used /media/local} / ${fs_size /media/local}
-${fs_bar 8 /media/local}
-${color white}/media/data${alignr}${fs_used /media/data} / ${fs_size /media/data}
-${fs_bar 8 /media/data}
-${color yellow}$hr
-${if_match "${nodename}" != "${work}"}${template0}${else}${template1}${endif}
-${color yellow}$hr
-${color white}${downspeedgraph wlp9s0 32,120 yellow yellow}${upspeedgraph wlp9s0 32,120 yellow yellow}
-${color white}Down: ${downspeed wlp9s0} k/s${alignr}Up: ${upspeed wlp9s0} k/s
-${color white}Total: ${totaldown wlp9s0}${alignr}Total: ${totalup wlp9s0}
-]]
+]].. dirGraphs() ..[[
+$hr
+${template0 ]] .. lan .. [[}]]
