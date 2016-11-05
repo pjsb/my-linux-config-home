@@ -20,7 +20,6 @@
   [[default]]
     background_darkness = 0.8
     background_image = None
-    background_type = transparent
     copy_on_selection = True
     font = Inconsolata 10
     scrollback_infinite = True

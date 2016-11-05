@@ -7,7 +7,7 @@ awful.rules = require("awful.rules")
 require("awful.autofocus")
 
 -- Start compositing manager
--- awful.util.spawn_with_shell("xcompmgr -cF &")
+awful.util.spawn_with_shell("xcompmgr -c -C -t-5 -l-5 -r4.2 -o.55")
 
 -- Widget and layout library
 local wibox = require("wibox")

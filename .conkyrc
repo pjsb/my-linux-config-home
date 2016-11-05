@@ -1,21 +1,4 @@
-if "D-SLS-PC-L01-JP" == nodename then
-  lan = "enp3s0"
-  mounts = {"/", "/tmp", "/home", "nbcache"}
-elseif "pv01.home" then
-  lan = "wlp9s0"
-  mounts = {"/", "/tmp", "/home", "/media/local", "/media/data"}
-end
-
-function dirGraphs()
-  local tplString = ""
-  for i, mount in ipairs(mounts) do
-    tplString = tplString .. string.format([[${color white}%s\
-${alignr} ${fs_used %s} / ${fs_size %s}
-${fs_bar 8 %s}
-]], mount,mount,mount,mount)
-  end
-  return tplString
-end
+local common = require "conkyrc"
 
 conky.config={
 background=true,
@@ -28,11 +11,13 @@ use_xft=true,
 font="Source Code Pro Mono:size=8",
 xftalpha=0.8,
 
-own_window=false,
+own_window=true,
 own_window_transparent=false,
-own_window_colour="ffffff",
-own_window_type="desktop",
-own_window_hints="undecorated,below,skip_taskbar",
+own_window_argb_visual=false,
+own_window_argb_value=150,
+own_window_colour="000000",
+own_window_type="override",
+own_window_hints="undecorated,below,sticky,skip_taskbar,skip_pager",
 double_buffer=true,
 default_graph_height=true,
 
@@ -46,7 +31,7 @@ stippled_borders=0,
 border_outer_margin=2,
 --border_inner_margin=4,
 pad_percents=0.2,
-border_width=1,
+border_width=0,
 short_units=true,
 
 default_color="white",
@@ -72,7 +57,7 @@ ${color white}${downspeedgraph \1 32,120 yellow yellow}${upspeedgraph \1 32,120 
 ${color white}Down: ${downspeed \1} k/s${alignr}Up: ${upspeed \1} k/s
 ${color white}Total: ${totaldown \1}${alignr}Total: ${totalup \1}
 ]],
-template1=[[\1]]
+template1=[[${color white}CPU${alignr}${execi 60 sensors | grep -A 0 \1 | cut -c18-19} °C]]
 }
 
 --[[
@@ -83,7 +68,7 @@ ${time %a %d. %b %k:%M}
 
 -- lua_load ~/.conky_lua_scripts.lua
 -- ${alignc}CPU: ${lua_parse pad ${cpu}}%
-
+print(common.lan)
 conky.text = [[
 ${color yellow}${nodename}${alignr}${kernel}
 $hr
@@ -99,9 +84,8 @@ ${color yellow}\
 $hr
 Sensors
 $hr
-${color white}CPU${alignr}${execi 60 sensors | grep -A 0 'Physical id 0' | cut -c18-19} °C
 System${alignr}${acpitemp} °C
-Radeon ${alignr}${execi 60 sensors | grep -A 2 'radeon-pci-0100' | cut -c16-17 | tail -1} °C
+Radeon ${alignr}${execi 60 sensors | grep -A 2 'radeon-pci-0' | cut -c16-17 | tail -1} °C
 ${color yellow}$hr
 ${color yellow}Memory
 ${color yellow}$hr
@@ -113,6 +97,8 @@ ${color yellow}$hr
 ${color yellow}Disk
 ${color yellow}$hr
 ${color white}${diskiograph /dev/sda 8 yellow yellow}
-]].. dirGraphs() ..[[
+]].. common.dirGraphs() ..[[
 $hr
-${template0 ]] .. lan .. [[}]]
+${template0 ]] .. common.lan .. [[}
+802.11 quality:$alignr${wireless_link_bar 8,60 ]] .. common.lan .. [[}
+802.11 bitrate:$alignr${wireless_bitrate ]] .. common.lan .. [[}]]
