@@ -5,9 +5,9 @@
 			<width py_type="int">1366</width>
 			<height py_type="int">746</height>
 			<xpos py_type="int">0</xpos>
-			<ypos py_type="int">19</ypos>
+			<ypos py_type="int">18</ypos>
 			<hpane py_type="int">304</hpane>
-			<vpane py_type="int">325</vpane>
+			<vpane py_type="int">115</vpane>
 			<maximized py_type="bool">True</maximized>
 			<search_desc py_type="bool">False</search_desc>
 			<show_nag_dialog py_type="bool">False</show_nag_dialog>
@@ -18,8 +18,8 @@
 			<width_verbose py_type="int">500</width_verbose>
 		</process>
 		<terminal>
-			<width py_type="int">796</width>
-			<height py_type="int">437</height>
+			<width py_type="int">1364</width>
+			<height py_type="int">748</height>
 			<width_verbose py_type="int">500</width_verbose>
 			<font py_type="none"/>
 			<all_tabs_use_custom_colors py_type="bool">False</all_tabs_use_custom_colors>
