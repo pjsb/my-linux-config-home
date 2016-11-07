@@ -75,3 +75,4 @@ known_hosts*
 .links/
 .config/geany/geany.conf
 .config/gtk-2.0/gtkfilechooser.ini
+.gtkrc-2.0
