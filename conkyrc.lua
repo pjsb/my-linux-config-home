@@ -7,8 +7,8 @@ hostname = string.gsub(hostname, "\n$", "")
 
 if "D-SLS-PC-L01-JP" == hostname then
   common.lan = "enp3s0"
-  common.mounts = {"/", "/tmp", "/home", "nbcache"}
-  common.cputemp = "'Physical id 0'"
+  common.mounts = {"/", "/tmp", "/home", "/home/jpeters/.cache/netbeans"}
+  common.cputemp = "coretemp-isa-"
 elseif "pv01.home"  == hostname then
   common.lan = "wlp9s0"
   common.mounts = {"/", "/tmp", "/home", "/media/local", "/media/data"}
@@ -22,7 +22,7 @@ end
 function common.dirGraphs()
   local tplString = ""
   for i, mount in ipairs(common.mounts) do
-    tplString = tplString .. string.format([[${color white}%s\
+    tplString = tplString .. string.format([[%s\
 ${alignr} ${fs_used %s} / ${fs_size %s}
 ${fs_bar 8 %s}
 ]], mount,mount,mount,mount)
@@ -31,4 +31,3 @@ ${fs_bar 8 %s}
 end
 
 return common
-
