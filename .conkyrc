@@ -14,7 +14,7 @@ xftalpha=0.8,
 own_window=true,
 own_window_transparent=false,
 own_window_argb_visual=false,
-own_window_argb_value=150,
+own_window_argb_value=100,
 own_window_colour="000000",
 own_window_type="override",
 own_window_hints="undecorated,below,sticky,skip_taskbar,skip_pager",
@@ -29,8 +29,8 @@ draw_outline=false,
 draw_borders=true,
 stippled_borders=0,
 border_outer_margin=2,
---border_inner_margin=4,
-pad_percents=0.2,
+border_inner_margin=4,
+pad_percents=0.25,
 border_width=0,
 short_units=true,
 
@@ -53,11 +53,11 @@ xinerama_head=2,
 
 template0=[[
 ${color yellow}\1${alignr}${addr \1}
-${color white}${downspeedgraph \1 32,120 yellow yellow}${upspeedgraph \1 32,120 yellow yellow}
-${color white}Down: ${downspeed \1} k/s${alignr}Up: ${upspeed \1} k/s
-${color white}Total: ${totaldown \1}${alignr}Total: ${totalup \1}
+${downspeedgraph \1 32,120 yellow yellow}${upspeedgraph \1 32,120 yellow yellow}
+Down: ${downspeed \1} k/s${alignr}Up: ${upspeed \1} k/s
+Total: ${totaldown \1}${alignr}Total: ${totalup \1}
 ]],
-template1=[[${color white}CPU${alignr}${execi 60 sensors | grep -A 0 \1 | cut -c18-19} °C]]
+template1=[[CPU${alignr}${execi 60 sensors | grep -A 0 \1 | cut -c18-19} °C]]
 }
 
 --[[
@@ -73,30 +73,25 @@ conky.text = [[
 ${color yellow}${nodename}${alignr}${kernel}
 $hr
 CPU - ${freq} Hz ${alignr}$loadavg
-${color yellow}$hr
 \#1 : ${cpugraph cpu0 10 yellow yellow}
 \#2 : ${cpugraph cpu1 10 yellow yellow}
 \#3 : ${cpugraph cpu2 10 yellow yellow}
 \#4 : ${cpugraph cpu3 10 yellow yellow}
-${color white}\
 Processes: $running_processes (running) / $processes (total)
 ${color yellow}\
 $hr
 Sensors
-$hr
 System${alignr}${acpitemp} °C
 Radeon ${alignr}${execi 60 sensors | grep -A 2 'radeon-pci-0' | cut -c16-17 | tail -1} °C
 ${color yellow}$hr
 ${color yellow}Memory
-${color yellow}$hr
-${color white}RAM ${alignr}$mem / $memmax
+RAM ${alignr}$mem / $memmax
 $memperc% ${color3}${membar 8}
-${color white}Swap ${alignr}$swap / $swapmax
+Swap ${alignr}$swap / $swapmax
 $swapperc% ${color3}${swapbar 8}
 ${color yellow}$hr
-${color yellow}Disk
-${color yellow}$hr
-${color white}${diskiograph /dev/sda 8 yellow yellow}
+Disk
+${diskiograph /dev/sda 8 yellow yellow}
 ]].. common.dirGraphs() ..[[
 $hr
 ${template0 ]] .. common.lan .. [[}

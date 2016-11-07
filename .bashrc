@@ -54,7 +54,7 @@ else
     export PATH="/opt/android-sdk-update-manager/platform-tools/:${PATH}"
 fi
 echo "#################### PATH START ####################"
-export PATH=$PATH:"/home/$USERDIR/bin"
+export PATH=$PATH:"/home/$USERDIR/bin":"/usr/local/bin/"
 IFS=':'
 CYGWIN=nodosfilewarning
 for A in ${PATH}

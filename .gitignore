@@ -73,3 +73,5 @@ known_hosts*
 *log.txt*
 .dbus/
 .links/
+.config/geany/geany.conf
+.config/gtk-2.0/gtkfilechooser.ini
