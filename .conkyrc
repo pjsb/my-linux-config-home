@@ -49,7 +49,7 @@ gap_y=40,
 alignment="top_right",
 use_spacer="left",
 no_buffers=true,
---xinerama_head=2,
+xinerama_head=2,
 
 template0=[[
 ${color yellow}\1${alignr}${addr \1}

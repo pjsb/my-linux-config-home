@@ -1,5 +1,5 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-demo 5.35 for jpeters on Mon Oct 31 13:18:16 2016.
+# Written by xscreensaver-demo 5.36 for jpeters on Fri Jan 20 15:16:34 2017.
 # https://www.jwz.org/xscreensaver/
 
 timeout:	1:30:00
@@ -262,6 +262,11 @@ programs:								      \
   GL: 				hydrostat -root				    \n\
   GL: 				raverhoop -root				    \n\
   GL: 				unicrud -root				    \n\
+  GL: 				cubestack -root				    \n\
+  GL: 				cubetwist -root				    \n\
+  GL: 				discoball -root				    \n\
+  GL: 				hexstrut -root				    \n\
+  GL: 				splodesic -root				    \n\
 
 
 pointerPollTime:    0:00:05

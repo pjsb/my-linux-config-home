@@ -1,0 +1,85 @@
+#!/bin/sh
+#By Michael Brown
+#
+#I've been working on make improvements on displaying the current emerge status,
+#this is the code I've come up with so far. It's still in testing, but it works
+#when it compiles java as well.. soon adding perl, py etc..
+#
+#Any problems or fixes please email me! xxxmikey_bxxx{AT}hotmail{dot}com
+#
+#If it gets any good i may rewrite it into C.
+
+#get PORTAGE_TMPDIR <- hard coded portage location?, might want to change!
+source /etc/make.globals
+source /etc/make.conf > /dev/null 2>&1
+
+notitle=0; nocol=0;
+
+for i in $@; do
+  if [ "$i" == "-nt" ]; then notitle=1; fi
+  if [ "$i" == "-nc" ]; then nocol=1; fi
+  if [ "$i" == "--help" ]; then
+    echo -e "Emerge Progress Script V1:\nThis code was a collection of other code
+ with extras,\nrecoded by Michael Brown, Previous authors plasmagunman, kopfarzt
+n\nDesigned to display the emerge status\nUsage: eprogress [options]\n\nOp
+ons:\n  -nc Enables the no colour mode\n  -nt Enables the no title mode\n  --help
+displays this text.\n\n\nDisplay:\nStandard format of result:\n  * [1] Packagena
+   todo/outof (percent%).\n\n[1] will either show a [C] for compiling, or [x] fo
+cancelled.\nPackage is the package you are emerging\ntodo/outof is the number of
+iles for that emerge left todo, and the total number."
+    exit 0
+  fi
+done
+
+if [ "$notitle" -eq "0" ]; then echo -e "Emerge Progress:"; fi
+
+if [ "$nocol" -eq "0" ]; then
+  coltab1="\E[;32m"; coltab2="\033[1m * \033[0m"
+else
+  coltab1=""; coltab2="  *"
+fi
+
+#can i read tmp folder?
+folder=`find $PORTAGE_TMPDIR/portage/ -name work 2> /dev/null`
+
+if [ $? -gt 0 ]; then
+  if [ "$nocol" -eq "0" ]; then echo -en '\E[;31m'; fi
+  echo "!! You do not have access to the portage tmp folder, unable to load stat !!"
+  tput sgr0
+fi
+
+#set up extentions
+srcext="c cpp cc java C"
+objext="o class"
+
+for ext in $srcext; do srccmd="$srccmd -name *.$ext* -o"; done
+for ext in $objext; do objcmd="$objcmd -name *.$ext* -o"; done
+
+for WORKDIR in $folder; do
+  TODO=`find $WORKDIR $srccmd -false 2> /dev/null | wc -l`
+  DONE=`find $WORKDIR $objcmd -false 2> /dev/null | wc -l`
+
+  if [ "$((TODO))" == "0" ]; then
+    percent=0
+  else
+    percent=$((100 * $DONE / $TODO))
+  fi
+
+  name="`basename \`dirname $WORKDIR\``"
+  len=${#name}; len=$((30-len)); i=0; sp=""
+  for (( i = 0; i <=len; i++ )); do sp="$sp "; done
+
+  #is it currently compiling?
+  res=$(ps ax | grep -v grep | grep -i $name)
+ 
+  if [ ${#res} -gt 0 ]; then
+    action="C"
+  else
+    action="x"
+  fi
+
+  echo -e $coltab1 "$coltab2 [$action] $name: $sp $DONE/$TODO, ($percent%)"
+done
+
+if [ "$nocol" -eq "0" ]; then tput sgr0; fi
+exit 0

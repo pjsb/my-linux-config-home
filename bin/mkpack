@@ -1,0 +1,14 @@
+#!/bin/sh
+#set -e
+#export PATH=/opt/oracle-jdk-bin-1.7.0.13/bin/:$PATH
+JAVAB=/cygdrive/d/Java/jdk1.7.0_51_32bit/bin
+#JAVAB=/cygdrive/d/Java/jdk1.7.0_51/bin
+TMPJAR=/tmp/a.jar
+TMPPACK=/tmp/a.pack
+CERT="$(cygpath -aw /cygdrive/f/Workspace.new/ar-irma2/legacy/irma/buildfiles/irma/xmClient.p12)"
+echo "$1 -> $TMPJAR -> $TMPPACK ($JAVAB)"
+$JAVAB/pack200 --no-gzip $TMPPACK $1
+$JAVAB/unpack200 $TMPPACK $TMPJAR
+$JAVAB/jarsigner -keystore $CERT -storetype PKCS12 -storepass gefudd3l -verbose -certs $TMPJAR xmClient
+$JAVAB/pack200 --no-gzip $1.pack $TMPJAR
+gzip -9 $1.pack

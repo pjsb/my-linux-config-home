@@ -1,3 +1,4 @@
 #volumeicon &
-xscreensaver -no-splash &
-exec ck-launch-session dbus-launch --sh-syntax --exit-with-session awesome
+# exec ck-launch-session dbus-launch --sh-syntax --exit-with-session awesome
+
+xscreensaver -no-splash & awesome

@@ -7,7 +7,7 @@ hostname = string.gsub(hostname, "\n$", "")
 
 if "D-SLS-PC-L01-JP" == hostname then
   common.lan = "enp3s0"
-  common.mounts = {"/", "/tmp", "/home", "/home/jpeters/.cache/netbeans"}
+  common.mounts = {"/", "/tmp", "/home", "/home/jpeters/.cache/netbeans/8.2/index"}
   common.cputemp = "coretemp-isa-"
 elseif "pv01.home"  == hostname then
   common.lan = "wlp9s0"

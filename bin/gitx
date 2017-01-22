@@ -1,0 +1,2 @@
+#!/bin/bash
+mono /home/jpeters/.wine/drive_c/Program\ Files\ \(x86\)/GitExtensions/GitExtensions.exe

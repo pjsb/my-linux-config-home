@@ -1,0 +1,7 @@
+#!/bin/bash
+if [[ -n "$1" ]]
+then
+	/cygdrive/c/Users/jens/workspace/_libs/php_54/php.exe -S localhost:8000 -t $1 2>&1
+else
+	/cygdrive/c/Users/jens/workspace/_libs/php_54/php.exe -S localhost:8000 2>&1
+fi

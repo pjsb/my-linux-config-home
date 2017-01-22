@@ -1,0 +1,19 @@
+[user]
+	name = Jens Peters
+	email = jpeters@encom.de
+[core]
+	autocrlf = Input
+	editor = nano
+	filemode = false
+[merge]
+	tool = meld
+[diff]
+	guitool = meld
+[mergetool "meld"]
+	tool = meld
+[difftool "meld"]
+	tool = meld
+[push]
+	default = simple
+[gui]
+	recentrepo = /home/jpeters/Projekte/misa2/dlm/dlm

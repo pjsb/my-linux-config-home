@@ -1,0 +1,1 @@
+cd "/homejens/GoogleDrive" && /usr/local/bin/grive > /var/log/grive.log 2>&1

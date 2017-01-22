@@ -1,0 +1,34 @@
+*.log*
+*.LOG*
+*.tmp*
+*.lock*
+*.DAT*
+*.dat*
+*.tmp
+*.temp*
+*.search-ms*
+*.lnk*
+Desktop.ini
+levono.iso
+ALLLINUX
+Thumbs.db
+.bash_history
+.thumbnails
+.bazaar*
+Downloads
+Dropbox
+Google\ Drive
+*crash*
+*Crash*
+*imap*
+Recent*
+AppData/Local*
+AppData/LocalLow*
+AppData/Roaming/npm*
+AppData/Roaming/Launchy*
+AppData/Roaming/LibreOffice*
+AppData/Roaming/Microsoft*
+AppData/Roaming/Free Download Manager
+AppData/Roaming/Tools*
+AppData/Roaming/Windows Live Writer
+nbi/product-cache*

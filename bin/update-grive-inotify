@@ -1,0 +1,23 @@
+#!/bin/bash
+# Google Drive Grive script that syncs your Google Drive folder on change
+# This functionality is currently missing in Grive and there are still no
+# official Google Drive app for Linux coming from Google.
+#
+# This script will only detect local changes and trigger a sync. Remote
+# changes will go undetected and are probably still best sync on a periodic
+# basis via cron.
+#
+# Kudos to Nestal Wan for writing the excellent Grive software
+# Also thanks to Google for lending some free disk space to me
+#
+# Peter Österberg, 2012
+ 
+GRIVE_COMMAND_WITH_PATH=/usr/local/bin/grive	# Path to your grive binary, change to match your system
+GDRIVE_PATH=/home/jens/GoogleDrive		# Path to the folder that you want to be synced
+TIMEOUT=300					# Timeout time in seconds, for periodic syncs. Nicely pointed out by ivanmacx
+ 
+while true
+do
+    inotifywait -t $TIMEOUT -e modify -e move -e create -e delete -r $GDRIVE_PATH
+    cd $GDRIVE_PATH && $GRIVE_COMMAND_WITH_PATH > /var/log/grive.log 2>&1
+done

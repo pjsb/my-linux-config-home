@@ -1,0 +1,9 @@
+[Added Associations]
+text/plain=geany.desktop;atom.desktop;wine-extension-txt.desktop;
+application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
+image/jpeg=shotwell-viewer.desktop;wine-extension-jpe.desktop;
+application/zip=org.gnome.FileRoller.desktop;
+application/x-compressed-tar=org.gnome.FileRoller.desktop;
+application/x-theme=geany.desktop;
+text/markdown=geany.desktop;
+application/pdf=libreoffice-draw.desktop;

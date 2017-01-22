@@ -1,0 +1,2 @@
+#!/bin/bash
+gpg -r jens -a -o- -e <<< "$*"

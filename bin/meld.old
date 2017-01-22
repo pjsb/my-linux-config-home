@@ -1,0 +1,3 @@
+#!/bin/bash
+# python "/cygdrive/c/Program Files (x86)/meld-1.6.1/bin/meld" $@
+python "/cygdrive/c/Program Files (x86)/meld-1.8.4/bin/meld" $@

@@ -1,0 +1,1 @@
+c:\cygwin\bin\ssh.exe root@192.168.2.180 phpmd /var/www/history-archiv.net/htmlbuilder/public text /var/www/history-archiv.net/htmlbuilder/public/test/phpmd/phpmd.xml
