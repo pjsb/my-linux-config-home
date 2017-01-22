@@ -109,3 +109,5 @@ mm.cfg
 .pki/
 .config/q4wine/db/
 
+.x2go*
+*dump*

@@ -3,7 +3,7 @@
 ### Begin group: DEFAULT
  
 # send to storage card by default
-# Datei auf die Speicherkarte anstatt in den Hauptspeicher des Gerätes (Voreinstellung) senden
+# Standardmäßig Datei zur Speicherkarte anstatt zum Hauptspeicher des Gerätes senden
 send_to_storage_card_by_default = False
  
 # confirm delete

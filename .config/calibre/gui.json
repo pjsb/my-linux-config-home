@@ -20,7 +20,7 @@
     "Manage Series"
   ], 
   "library_usage_stats": {
-    "/home/jens/Dropbox/Calibre Bibliothek": 15, 
+    "/home/jens/Dropbox/Calibre Bibliothek": 16, 
     "/home/jens/Calibre Library": 2
   }, 
   "action-layout-toolbar-child": [
@@ -177,10 +177,10 @@
       255
     ]
   ], 
-  "kindle_collections plugin:edit settings dialog: geometry": {
-    "__class__": "bytearray", 
-    "__value__": "AdnQywABAAAAAAD/AAAAjwAABFYAAAKlAAAA/wAAAI8AAARWAAACpQAAAAAAAA=="
-  }, 
+  "tag_browser_splitter_horizontal_state": [
+    true, 
+    237
+  ], 
   "previous_sort_order_BooksView": {
     "#tags": true, 
     "#optimized": true, 
@@ -191,8 +191,8 @@
     "__value__": "AdnQywACAAAAAADJAAAAGgAABGwAAAKsAAAAygAAADAAAARrAAACqAAAAAAAAAAABVY="
   }, 
   "previous_sort_order_DeviceBooksView": {
-    "inlibrary": true, 
-    "title": true
+    "title": true, 
+    "inlibrary": true
   }, 
   "card_a_view books view state": {
     "column_alignment": {
@@ -283,10 +283,10 @@
     "__class__": "bytearray", 
     "__value__": "AdnQywABAAAAAAFEAAAAwwAABBAAAAJfAAABRQAAANkAAAQPAAACWwAAAAAAAA=="
   }, 
-  "tag_browser_splitter_horizontal_state": [
-    true, 
-    237
-  ], 
+  "kindle_collections plugin:edit settings dialog: geometry": {
+    "__class__": "bytearray", 
+    "__value__": "AdnQywABAAAAAAD/AAAAjwAABFYAAAKlAAAA/wAAAI8AAARWAAACpQAAAAAAAA=="
+  }, 
   "action-layout-toolbar-device": [
     "Add Books", 
     "Edit Metadata", 
