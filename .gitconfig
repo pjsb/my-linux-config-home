@@ -17,3 +17,5 @@
 	default = simple
 [gui]
 	recentrepo = /home/jpeters/Projekte/misa2/dlm/dlm
+[rerere]
+	enabled = true

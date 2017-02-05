@@ -1,5 +1,5 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-demo 5.36 for jpeters on Fri Jan 20 15:16:34 2017.
+# Written by xscreensaver-demo 5.36 for jpeters on Fri Feb  3 15:55:53 2017.
 # https://www.jwz.org/xscreensaver/
 
 timeout:	1:30:00
@@ -46,7 +46,7 @@ textURL:	http://planet.gentoo.org/rss20.xml
 programs:								      \
 				maze -root				    \n\
   GL: 				superquadrics -root			    \n\
-				attraction -root			    \n\
+-				attraction -root			    \n\
 				blitspin -root				    \n\
 				greynetic -root				    \n\
 				helix -root				    \n\
@@ -93,7 +93,7 @@ programs:								      \
 				triangle -root				    \n\
 				xjack -root				    \n\
 				xlyap -root				    \n\
-  GL: 				atlantis -root				    \n\
+- GL: 				atlantis -root				    \n\
 				bsod -root				    \n\
   GL: 				bubble3d -root				    \n\
   GL: 				cage -root				    \n\
@@ -153,7 +153,7 @@ programs:								      \
 				whirlwindwarp -root			    \n\
 				zoom -root				    \n\
 				anemone -root				    \n\
-				apollonian -root			    \n\
+-				apollonian -root			    \n\
   GL: 				boxed -root				    \n\
   GL: 				cubenetic -root				    \n\
   GL: 				endgame -root				    \n\
