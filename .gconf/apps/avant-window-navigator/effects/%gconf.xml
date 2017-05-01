@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="active_rect_outline" mtime="1383986372" type="string">
+		<stringvalue>#5b75897db1630000</stringvalue>
+	</entry>
+	<entry name="active_rect_color" mtime="1383986372" type="string">
+		<stringvalue>#4b4b696983837f00</stringvalue>
+	</entry>
+	<entry name="dot_color" mtime="1383986372" type="string">
+		<stringvalue>#5b75897db163ff00</stringvalue>
+	</entry>
+</gconf>

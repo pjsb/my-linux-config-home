@@ -148,3 +148,4 @@ mm.cfg
 node_modules/
 workspace/
 .config/wireshark/recent*
+.config/Thunar/accels.scm

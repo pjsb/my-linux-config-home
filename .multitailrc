@@ -1,1 +1,16 @@
-
+colorscheme:java_log
+cs_re:white,,bold:\[[a-zA-Z_]*?\.[a-zA-Z_]*?\.[a-zA-Z_]*?]
+cs_re_s:white,cyan:(User:[a-zA-Z]*)[^\s]
+cs_re:blue:[0-9]{4}-[0-9]{2}-[0-9]{2}\s[0-9]{2}:[0-9]{2}:[0-9]{2},[0-9]{3}
+cs_re:blue,,bold:REPO_
+cs_re:magenta,,bold:SOLR_
+cs_re:cyan,,bold:SHARE
+cs_re:green,,bold:INFO
+cs_re:yellow,,bold:WARN
+cs_re:magenta,,bold:DEBUG
+cs_re:red,,bold:ERROR
+cs_re:red,,bold:FATAL
+cs_re:green:^.*INFO.*$
+cs_re:yellow:^.*WARN.*$
+cs_re:magenta:^.*DEBUG.*$
+cs_re_s:white,red:ERROR (.*)

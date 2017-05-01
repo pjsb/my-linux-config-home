@@ -1,0 +1,23 @@
+[amarok]
+_k_friendly_name=Amarok
+decreaseVolume=Meta+-,Meta+-,Lautstärke verringern
+increaseVolume=Meta++,Meta++,Lautstärke erhöhen
+loveTrack=Meta+L,Meta+L,Last.fm: Aktuelles Stück favorisieren
+mute=Meta+M,Meta+M,Stummschaltung
+next=none,none,Nächstes Stück
+play_pause=none,none,Wiedergabe/Pause
+playlist_add=Meta+A,Meta+A,Medien hinzufügen ...
+prev=none,none,Vorheriges Stück
+rate1=Meta+1,Meta+1,Aktuelles Stück bewerten mit: 1
+rate2=Meta+2,Meta+2,Aktuelles Stück bewerten mit: 2
+rate3=Meta+3,Meta+3,Aktuelles Stück bewerten mit: 3
+rate4=Meta+4,Meta+4,Aktuelles Stück bewerten mit: 4
+rate5=Meta+5,Meta+5,Aktuelles Stück bewerten mit: 5
+replay=none,none,Aktuelles Stück neu wiedergeben
+seek_backward_medium=Meta+Shift+-,Meta+Shift+-,Rückwärts suchen um 10 seconds
+seek_forward_medium=Meta+Shift++,Meta+Shift++,Vorwärts suchen um 10 seconds
+showNotificationPopup=Meta+O,Meta+O,Benachrichtigungsfenster anzeigen
+skipTrack=Meta+S,Meta+S,Last.fm: Aktuelles Stück abbrechen
+stop=none,none,Anhalten
+stop_after_current=Meta+Shift+V,Meta+Shift+V,Nach aktuellem Stück anhalten
+toggleMainWindow=none,none,Hauptfenster anzeigen/ausblenden

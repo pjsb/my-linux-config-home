@@ -1,0 +1,15 @@
+{
+  "name": "mytools",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jens@87-records.de (http://pjsdev.blogspot.de)",
+  "license": "ISC",
+  "dependencies": {
+    "shelljs": "^0.7.6",
+    "shelljs-plugin-sleep": "^0.1.0"
+  }
+}

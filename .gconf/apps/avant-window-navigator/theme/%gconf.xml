@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="dialog_title_bg" mtime="1383986372" type="string">
+		<stringvalue>#eeeeebebe7e7ff00</stringvalue>
+	</entry>
+	<entry name="dialog_bg" mtime="1383986372" type="string">
+		<stringvalue>#dcdcdadad5d5ff00</stringvalue>
+	</entry>
+	<entry name="show_sep" mtime="1383986372" type="bool" value="true"/>
+	<entry name="draw_pattern" mtime="1383986372" type="bool" value="false"/>
+	<entry name="icon_text_outline_color" mtime="1383986372" type="string">
+		<stringvalue>#dcdcdadad5d5ff00</stringvalue>
+	</entry>
+	<entry name="icon_text_color" mtime="1383986372" type="string">
+		<stringvalue>#000000000000ff00</stringvalue>
+	</entry>
+	<entry name="sep_color" mtime="1383986372" type="string">
+		<stringvalue>#9c9c9a9a9494a400</stringvalue>
+	</entry>
+	<entry name="hilight" mtime="1383986372" type="string">
+		<stringvalue>#9c9c9a9a94946400</stringvalue>
+	</entry>
+	<entry name="border" mtime="1383986372" type="string">
+		<stringvalue>#8c02894d828bc800</stringvalue>
+	</entry>
+	<entry name="ghistep2" mtime="1383986372" type="string">
+		<stringvalue>#dcdcdadad5d52000</stringvalue>
+	</entry>
+	<entry name="ghistep1" mtime="1383986372" type="string">
+		<stringvalue>#c4c4c2c2bdbdb400</stringvalue>
+	</entry>
+	<entry name="gstep2" mtime="1383986372" type="string">
+		<stringvalue>#dcdcdadad5d5c800</stringvalue>
+	</entry>
+	<entry name="gstep1" mtime="1383986372" type="string">
+		<stringvalue>#dcdcdadad5d5e000</stringvalue>
+	</entry>
+</gconf>

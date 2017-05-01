@@ -475,6 +475,11 @@ awful.rules.rules = {
     { rule_any = {type = { "normal", "dialog" }
       }, properties = { titlebars_enabled = true }
     },
+    -- get window class name with `xprop`
+    { rule = {},
+      except_any = { class = { "Terminator", "NetBeans IDE 8.2", "Zathura" } },
+      callback = titlebar_add_with_settings
+     },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
     -- { rule = { class = "Firefox" },
@@ -530,8 +535,8 @@ client.connect_signal("request::titlebars", function(c)
         { -- Right
             awful.titlebar.widget.floatingbutton (c),
             awful.titlebar.widget.maximizedbutton(c),
-            awful.titlebar.widget.stickybutton   (c),
-            awful.titlebar.widget.ontopbutton    (c),
+            -- awful.titlebar.widget.stickybutton   (c),
+            -- awful.titlebar.widget.ontopbutton    (c),
             awful.titlebar.widget.closebutton    (c),
             layout = wibox.layout.fixed.horizontal()
         },
@@ -572,8 +577,8 @@ naughty.notify{
 }
 ]]
 
-awful.util.spawn_with_shell("conky -d")
+--awful.util.spawn_with_shell("conky -d")
 awful.util.spawn_with_shell("volumeicon")
-awful.util.spawn_with_shell("xfce4-power-manager")
+--awful.util.spawn_with_shell("xfce4-power-manager")
 -- magneto
 -- .xinitrc
