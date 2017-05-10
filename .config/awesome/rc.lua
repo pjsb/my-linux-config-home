@@ -1,7 +1,6 @@
 -- Standard awesome library
 local gears = require("gears")
 local awful = require("awful")
--- DEPRECATED? awful.rules = require("awful.rules")
 require("awful.autofocus")
 -- Widget and layout library
 local wibox = require("wibox")
@@ -61,8 +60,8 @@ modkey = "Mod4"
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
-    awful.layout.suit.tile,
     awful.layout.suit.floating,
+    awful.layout.suit.tile,
     awful.layout.suit.tile.left,
     awful.layout.suit.tile.bottom,
     awful.layout.suit.tile.top,
@@ -475,11 +474,18 @@ awful.rules.rules = {
     { rule_any = {type = { "normal", "dialog" }
       }, properties = { titlebars_enabled = true }
     },
+
     -- get window class name with `xprop`
-    { rule = {},
-      except_any = { class = { "Terminator", "NetBeans IDE 8.2", "Zathura" } },
-      callback = titlebar_add_with_settings
-     },
+    { rule = { class =  "Terminator" },
+       properties = { titlebars_enabled = false } },
+    { rule = { class =  "NetBeans IDE 8.2" },
+      properties = { titlebars_enabled = false } },
+    { rule = { class =  "Zathura"  },
+       properties = { titlebars_enabled = false } },
+    { rule = { class =  "google-chrome" },
+      properties = { titlebars_enabled = false } },
+    { rule = { class =  "atom" },
+      properties = { titlebars_enabled = false } },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
     -- { rule = { class = "Firefox" },
@@ -578,7 +584,7 @@ naughty.notify{
 ]]
 
 --awful.util.spawn_with_shell("conky -d")
-awful.util.spawn_with_shell("volumeicon")
+awful.spawn("volumeicon")
 --awful.util.spawn_with_shell("xfce4-power-manager")
 -- magneto
 -- .xinitrc
