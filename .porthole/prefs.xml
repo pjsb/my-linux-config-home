@@ -2,13 +2,13 @@
 <portholeprefs ver="0.6.1">
 	<window>
 		<main>
-			<width py_type="int">1366</width>
-			<height py_type="int">746</height>
+			<width py_type="int">1918</width>
+			<height py_type="int">1158</height>
 			<xpos py_type="int">0</xpos>
-			<ypos py_type="int">18</ypos>
+			<ypos py_type="int">20</ypos>
 			<hpane py_type="int">304</hpane>
 			<vpane py_type="int">115</vpane>
-			<maximized py_type="bool">True</maximized>
+			<maximized py_type="bool">False</maximized>
 			<search_desc py_type="bool">False</search_desc>
 			<show_nag_dialog py_type="bool">False</show_nag_dialog>
 		</main>

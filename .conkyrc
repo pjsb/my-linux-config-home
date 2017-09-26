@@ -46,10 +46,10 @@ default_graph_width=0,
 
 gap_x=15,
 gap_y=40,
-alignment="top_right",
+alignment="top_left",
 use_spacer="left",
 no_buffers=false,
-xinerama_head=0,
+xinerama_head=2,
 
 template0=[[
 ${color yellow}\1${alignr}${addr \1}

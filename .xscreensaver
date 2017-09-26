@@ -1,5 +1,5 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-demo 5.36 for jpeters on Fri Apr 28 13:06:16 2017.
+# Written by xscreensaver-demo 5.37 for jpeters on Wed Sep 13 11:12:35 2017.
 # https://www.jwz.org/xscreensaver/
 
 timeout:	1:30:00
@@ -31,11 +31,11 @@ dpmsSuspend:	2:00:00
 dpmsOff:	4:00:00
 grabDesktopImages:  False
 grabVideoFrames:    False
-chooseRandomImages: False
-imageDirectory:	
+chooseRandomImages: True
+imageDirectory:	/home/jpeters/Bilder/Backgrounds
 
-mode:		random
-selected:	-1
+mode:		one
+selected:	143
 
 textMode:	file
 textLiteral:	XScreenSaver
@@ -136,7 +136,7 @@ programs:								      \
   GL: 				gflux -root				    \n\
 -				nerverot -root				    \n\
 				xrayswarm -root				    \n\
-				xspirograph -root			    \n\
+-				xspirograph -root			    \n\
   GL: 				circuit -root				    \n\
   GL: 				dangerball -root			    \n\
 - GL: 				dnalogo -root				    \n\
@@ -151,7 +151,7 @@ programs:								      \
   GL: 				stonerview -root			    \n\
 				vermiculate -root			    \n\
 				whirlwindwarp -root			    \n\
-				zoom -root				    \n\
+-				zoom -root				    \n\
 				anemone -root				    \n\
 -				apollonian -root			    \n\
   GL: 				boxed -root				    \n\
@@ -267,6 +267,7 @@ programs:								      \
   GL: 				discoball -root				    \n\
   GL: 				hexstrut -root				    \n\
   GL: 				splodesic -root				    \n\
+  GL: 				vigilance -root				    \n\
 
 
 pointerPollTime:    0:00:05
