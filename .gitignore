@@ -7,6 +7,7 @@
 **Cookie*
 **cache**
 **cookie*
+.cache/**
 *.backup
 *VirtualBox*
 *certificate*
@@ -149,3 +150,13 @@ node_modules/
 workspace/
 .config/wireshark/recent*
 .config/Thunar/accels.scm
+.config/libreoffice
+Ableton
+.macromedia
+.adobe
+accels
+tmp/**
+.entropy/last_notices
+.entropy/recent_searches
+.entropy/ws_cache
+.cordova

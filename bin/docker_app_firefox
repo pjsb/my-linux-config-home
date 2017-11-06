@@ -1,1 +1,2 @@
-docker run -ti --rm --net=host        -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /home/jpeters/.Xauthority:/home/developer/.Xauthority firefox
+xhost +local:
+docker run -ti --rm --net=host -e DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /home/jpeters/.Xauthority:/home/developer/.Xauthority firefox

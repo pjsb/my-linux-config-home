@@ -10,9 +10,13 @@ local beautiful = require("beautiful")
 local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup").widget
+local cyclefocus = require('cyclefocus')
+local tyrannical = require("tyrannical")
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:
 require("awful.hotkeys_popup.keys")
+
+print("Entered rc.lua: " .. os.time())
 
 -- local xrandr = require("/home/jpeters/.config/awesome/xrandr.lua")
 
@@ -53,6 +57,8 @@ end
 
 
 -- -- This is used later as the default terminal and editor to run.
+browser = "google-chrome-stable"
+mail = "thunderbird"
 terminal = "terminator"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
@@ -73,15 +79,8 @@ awful.layout.layouts = {
     awful.layout.suit.tile.top,
     awful.layout.suit.fair,
     awful.layout.suit.fair.horizontal,
-    awful.layout.suit.spiral,
-    awful.layout.suit.spiral.dwindle,
     awful.layout.suit.max,
     awful.layout.suit.max.fullscreen,
-    awful.layout.suit.magnifier,
-    awful.layout.suit.corner.nw,
-    awful.layout.suit.corner.ne,
-    awful.layout.suit.corner.sw,
-    awful.layout.suit.corner.se,
 }
 -- }}}
 
@@ -184,15 +183,96 @@ local function set_wallpaper(s)
     end
 end
 
+tyrannical.tags = {
+    {
+        name        = "Term",                 -- Call the tag "Term"
+        init        = true,                   -- Load the tag on startup
+        exclusive   = true,                   -- Refuse any other type of clients (by classes)
+        screen      = {1,2},                  -- Create this tag on screen 1 and screen 2
+        layout      = awful.layout.suit.tile, -- Use the tile layout
+        instance    = {"dev", "ops"},         -- Accept the following instances. This takes precedence over 'class'
+        class       = { --Accept the following classes, refuse everything else (because of "exclusive=true")
+            "xterm" , "urxvt" , "aterm","URxvt","XTerm","konsole","terminator","gnome-terminal"
+        }
+    } ,
+    {
+        name        = "Internet",
+        init        = true,
+        exclusive   = true,
+      --icon        = "~net.png",                 -- Use this icon for the tag (uncomment with a real path)
+        screen      = screen.count()>1 and 2 or 1,-- Setup on screen 2 if there is more than 1 screen, else on screen 1
+        layout      = awful.layout.suit.max,      -- Use the max layout
+        class = {
+            "Opera"         , "Firefox"        , "Rekonq"    , "Dillo"        , "Arora",
+            "Chromium"      , "nightly"        , "minefield", "Google-chrome"     }
+    } ,
+    {
+        name        = "Files",
+        init        = true,
+        exclusive   = true,
+        screen      = 1,
+        layout      = awful.layout.suit.tile,
+        exec_once   = {"dolphin"}, --When the tag is accessed for the first time, execute this command
+        class  = {
+            "Thunar", "Konqueror", "Dolphin", "ark", "Nautilus","emelfm", "caja"
+        }
+    } ,
+    {
+        name        = "Develop",
+        init        = true,
+        exclusive   = true,
+        screen      = 1,
+        layout      = awful.layout.suit.max                          ,
+        class ={
+            "QGit", "KDevelop", "Codeblocks", "Code::Blocks" , "DDD", "kate4", "atom", "geany"}
+    } ,
+    {
+        name        = "Doc",
+        init        = false, -- This tag wont be created at startup, but will be when one of the
+                             -- client in the "class" section will start. It will be created on
+                             -- the client startup screen
+        exclusive   = true,
+        layout      = awful.layout.suit.max,
+        class       = {
+            "Assistant"     , "Okular"         , "Evince"    , "EPDFviewer"   , "xpdf",
+            "Xpdf"          ,                                        }
+    } ,
+}
+
+-- Ignore the tag "exclusive" property for the following clients (matched by classes)
+tyrannical.properties.intrusive = {
+    "ksnapshot"     , "pinentry"       , "gtksu"     , "kcalc"        , "xcalc"               ,
+    "feh"           , "Gradient editor", "About KDE" , "Paste Special", "Background color"    ,
+    "kcolorchooser" , "plasmoidviewer" , "Xephyr"    , "kruler"       , "plasmaengineexplorer",
+}
+
+-- Ignore the tiled layout for the matching clients
+tyrannical.properties.floating = {
+    "MPlayer"      , "pinentry"        , "ksnapshot"  , "pinentry"     , "gtksu"          ,
+    "xine"         , "feh"             , "kmix"       , "kcalc"        , "xcalc"          ,
+    "yakuake"      , "Select Color$"   , "kruler"     , "kcolorchooser", "Paste Special"  ,
+    "New Form"     , "Insert Picture"  , "kcharselect", "mythfrontend" , "plasmoidviewer"
+}
+
+-- Make the matching clients (by classes) on top of the default layout
+tyrannical.properties.ontop = {
+    "Xephyr"       , "ksnapshot"       , "kruler"
+}
+
+-- Force the matching clients (by classes) to be centered on the screen on init
+tyrannical.properties.placement = {
+    kcalc = awful.placement.centered
+}
+
+tyrannical.settings.block_children_focus_stealing = true --Block popups ()
+tyrannical.settings.group_children = true --Force popups/dialogs to have the same tags as the parent client
+
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
 screen.connect_signal("property::geometry", set_wallpaper)
 
 awful.screen.connect_for_each_screen(function(s)
     -- Wallpaper
     set_wallpaper(s)
-
-    -- Each screen has its own tag table.
-    awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -434,7 +514,7 @@ for i = 1, 9 do
                       end
                   end,
                   {description = "toggle focused client on tag #" .. i, group = "tag"})
-                  
+
         -- ,awful.key({}, { modkey, "F12" }, function() xrandr.xrandr() end)
     )
 end
@@ -587,37 +667,15 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
---[[
-To automatically set transparency level for particular window class, you can add the following rule to awful.rules in rc.lua:
-{rule = {class = "some-class"},
- properties = {opacity = 0.8} }
-(You are able to know the window class of particular app with the help of xprop  xprop |grep "WM_CLASS(STRING)")
-
-With such a rule for XTerm I have terminal windows of 80% opacity.
-
-If you want transparent notifications, overwrite the default presets in your rc.lua. The following lines sets a 80% opacity for each urgency level:
-naughty.config.presets.normal.opacity = 0.8
-naughty.config.presets.low.opacity = 0.8
-naughty.config.presets.critical.opacity = 0.8
-
-The default options will be ignored, if a notification sets a custom opacity:
-naughty.notify{
-  title="NaughtyNotifcation",
-  text="Check, if everything works.",
-  opacity=0.5
-}
-]]
-
 awful.spawn("conky -d");
 awful.spawn("volumeicon");
 --awful.spawn("xscreensaver -no-splash");
-awful.spawn("magneto");
-awful.spawn("slack");
-awful.spawn("thunderbird");
+--awful.spawn("magneto");
+--awful.spawn("slack");
+--awful.spawn("thunderbird");
 
-awful.spawn("xrandr --setprovideroutputsource modesetting nouveau");
-awful.spawn("xrandr --output HDMI-1-1 --mode 1280x1024");
-awful.spawn("sleep 1s");
-awful.spawn("xrandr --output HDMI-1-1 --mode 1280x1024 --pos 0x0 --rotate normal --output DVI-I-2 --mode 1920x1200 --pos 1280x0 --output DVI-I-1 --mode 1920x1080 --pos 3200x0");
-
+--awful.spawn("xrandr --setprovideroutputsource modesetting nouveau");
+--awful.spawn("xrandr --output HDMI-1-1 --mode 1280x1024");
+--awful.spawn("sleep 1s");
+--awful.spawn("xrandr --output HDMI-1-1 --mode 1280x1024 --pos 0x0 --rotate normal --output DVI-I-2 --mode 1920x1200 --pos 1280x0 --output DVI-I-1 --mode 1920x1080 --pos 3200x0");
 -- .xinitrc

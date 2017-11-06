@@ -1,5 +1,6 @@
 [Alsa]
-card=default
+card=HDA Intel PCH
+channel=Master
 
 [Notification]
 show_notification=true
@@ -7,14 +8,14 @@ notification_type=0
 
 [StatusIcon]
 stepsize=5
-onclick=xterm -e 'alsamixer'
+onclick=xfce4-mixer
 theme=Default
-use_panel_specific_icons=false
+use_panel_specific_icons=true
 lmb_slider=false
 mmb_mute=false
 use_horizontal_slider=false
-show_sound_level=false
-use_transparent_background=false
+show_sound_level=true
+use_transparent_background=true
 
 [Hotkeys]
 up_enabled=false

@@ -1,5 +1,5 @@
 ﻿###
-###  vlc 2.2.4
+###  vlc 2.2.6
 ###
 
 ###
@@ -78,7 +78,7 @@ freetype-font=DejaVu Sans
 [logger] # File logging
 
 # Log filename (string)
-#logfile=
+logfile=/home/jens/vlc.log
 
 # Log format (string)
 #logmode=text
@@ -90,7 +90,7 @@ freetype-font=DejaVu Sans
 #syslog-facility=user
 
 # Verbosity (integer)
-#log-verbose=-1
+log-verbose=1
 
 [vod_rtsp] # Legacy RTSP VoD server
 
@@ -890,7 +890,7 @@ telnet-password=1234
 #sout-avi-subject=
 
 # Encoder (string)
-#sout-avi-encoder=VLC Media Player - 2.2.4 Weatherwax
+#sout-avi-encoder=VLC Media Player - 2.2.6 Umbrella
 
 # Keywords (string)
 #sout-avi-keywords=
@@ -978,6 +978,23 @@ telnet-password=1234
 
 # Create "Fast Start" files (boolean)
 #sout-mp4-faststart=1
+
+[vdpau_chroma] # VDPAU surface conversions
+
+# Deinterlace (integer)
+#vdpau-deinterlace=1
+
+# Inverse telecine (boolean)
+#vdpau-ivtc=0
+
+# Deinterlace chroma skip (boolean)
+#vdpau-chroma-skip=0
+
+# Noise reduction level (float)
+#vdpau-noise-reduction=0.000000
+
+# Scaling quality (integer)
+#vdpau-scaling=0
 
 [mono] # Stereo to mono downmixer
 
@@ -1295,6 +1312,104 @@ telnet-password=1234
 
 # Peak height (integer)
 #spect-peak-height=1
+
+[schroedinger] # Dirac video decoder using libschroedinger
+
+# Rate control method (string)
+#sout-schro-rate-control=
+
+# Constant quality factor (float)
+#sout-schro-quality=-1.000000
+
+# Noise Threshold (float)
+#sout-schro-noise-threshold=-1.000000
+
+# CBR bitrate (kbps) (integer)
+#sout-schro-bitrate=-1
+
+# Maximum bitrate (kbps) (integer)
+#sout-schro-max-bitrate=-1
+
+# Minimum bitrate (kbps) (integer)
+#sout-schro-min-bitrate=-1
+
+# GOP structure (string)
+#sout-schro-gop-structure=
+
+# GOP length (integer)
+#sout-schro-gop-length=-1
+
+# Chroma format (string)
+#sout-schro-chroma-fmt=420
+
+# Picture coding mode (string)
+#sout-schro-coding-mode=auto
+
+# Motion Vector precision (string)
+#sout-schro-mv-precision=
+
+# Size of motion compensation blocks (string)
+#sout-schro-motion-block-size=
+
+# Overlap of motion compensation blocks (string)
+#sout-schro-motion-block-overlap=
+
+# Three component motion estimation (integer)
+#sout-schro-me-combined=-1
+
+# Enable hierarchical Motion Estimation (integer)
+#sout-schro-enable-hierarchical-me=-1
+
+# Number of levels of downsampling (integer)
+#sout-schro-downsample-levels=-1
+
+# Enable Global Motion Estimation (integer)
+#sout-schro-enable-global-me=-1
+
+# Enable Phase Correlation Estimation (integer)
+#sout-schro-enable-phasecorr-me=-1
+
+# Intra picture DWT filter (string)
+#sout-schro-intra-wavelet=
+
+# Inter picture DWT filter (string)
+#sout-schro-inter-wavelet=
+
+# Number of DWT iterations (integer)
+#sout-schro-transform-depth=-1
+
+# Enable multiple quantizers (integer)
+#sout-schro-enable-multiquant=-1
+
+# Size of code blocks in each subband (string)
+#sout-schro-codeblock-size=
+
+# Prefilter (string)
+#sout-schro-filtering=
+
+# Amount of prefiltering (float)
+#sout-schro-filter-value=-1.000000
+
+# Enable Scene Change Detection (integer)
+#sout-schro-enable-scd=-1
+
+# perceptual weighting method (string)
+#sout-schro-perceptual-weighting=
+
+# perceptual distance (float)
+#sout-schro-perceptual-distance=-1.000000
+
+# Disable arithmetic coding (integer)
+#sout-schro-enable-noarith=-1
+
+# Horizontal slices per frame (integer)
+#sout-schro-horiz-slices=-1
+
+# Vertical slices per frame (integer)
+#sout-schro-vert-slices=-1
+
+# Force Profile (string)
+#sout-schro-force-profile=
 
 [dvbsub] # DVB subtitles decoder
 
@@ -1741,11 +1856,6 @@ sout-x264-tune=film
 # x264 advanced options. (string)
 #sout-x264-options=
 
-[gstdecode] # GStreamer Based Decoder
-
-# Use DecodeBin (boolean)
-#use-decodebin=0
-
 [vorbis] # Vorbis audio decoder
 
 # Encoding quality (integer)
@@ -2166,6 +2276,11 @@ sout-x264-tune=film
 
 # UDP timeout (in ms) (integer)
 #netsync-timeout=500
+
+[lirc] # Infrared remote control interface
+
+# Change the lirc configuration file (string)
+#lirc-file=
 
 [oldrc] # Remote control interface
 
@@ -3327,7 +3442,7 @@ deinterlace=-1
 #deinterlace-mode=blend
 
 # Video output module (string)
-vout=any
+vout=xcb_glx
 
 # Video filter module (string)
 #video-filter=
@@ -3615,7 +3730,7 @@ vod-server=any
 #inhibit=1
 
 # Play files randomly forever (boolean)
-random=1
+#random=0
 
 # Repeat all (boolean)
 #loop=0

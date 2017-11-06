@@ -1,20 +1,8 @@
 [Added Associations]
-text/plain=geany.desktop;atom.desktop;wine-extension-txt.desktop;
-application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop;
-image/jpeg=shotwell-viewer.desktop;ristretto.desktop;zzz-gimp.desktop;wine-extension-jpe.desktop;
+application/pdf=google-chrome.desktop;mupdf.desktop;vivaldi-stable.desktop;
+text/plain=geany.desktop;
+video/mp4=vlc.desktop;
+application/x-bzip-compressed-tar=org.gnome.FileRoller.desktop;
 application/zip=org.gnome.FileRoller.desktop;
-application/x-compressed-tar=org.gnome.FileRoller.desktop;
-application/x-theme=geany.desktop;
-text/markdown=geany.desktop;
-application/pdf=libreoffice-draw.desktop;
-application/xml=geany.desktop;
-application/vnd.debian.binary-package=org.gnome.FileRoller.desktop;
-application/x-xz-compressed-tar=org.gnome.FileRoller.desktop;
-application/vnd.rar=org.gnome.FileRoller.desktop;
-text/vnd.trolltech.linguist=geany.desktop;
-application/x-shellscript=geany.desktop;
-application/vnd.ms-excel.sheet.macroEnabled.12=libreoffice-calc.desktop;
-application/sql=geany.desktop;
-application/vnd.oasis.opendocument.spreadsheet=libreoffice-calc.desktop;
-image/png=shotwell-viewer.desktop;
-application/x-ruby=geany.desktop;
+image/jpeg=shotwell-viewer.desktop;
+inode/directory=org.gnome.baobab.desktop;
