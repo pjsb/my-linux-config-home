@@ -1,0 +1,47 @@
+{
+  "name": "linux_arm",
+  "title": "Linux ARM",
+  "description": "Linux ARM is a Unix-like and mostly POSIX-compliant computer operating system (OS) assembled under the model of free and open-source software development and distribution. Using host OS (Mac OS X, Linux ARM) you can build native application for Linux ARM platform.",
+  "url": "http://platformio.org/platforms/linux_arm",
+  "homepage": "http://platformio.org/platforms/linux_arm",
+  "license": "Apache-2.0",
+  "engines": {
+    "platformio": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/platformio/platform-linux_arm.git"
+  },
+  "version": "1.4.6",
+  "packageRepositories": [
+    "https://dl.bintray.com/platformio/dl-packages/manifest.json",
+    "http://dl.platformio.org/packages/manifest.json",
+    "http://repo.artik.cloud/artik/bin/pub/platformio/manifest.json"
+  ],
+  "frameworks": {
+    "wiringpi": {
+      "package": "framework-wiringpi",
+      "script": "builder/frameworks/wiringpi.py"
+    },
+    "artik-sdk": {
+      "package": "framework-artik-sdk",
+      "script": "builder/frameworks/artik-sdk.py"
+    }
+  },
+  "packages": {
+    "toolchain-gccarmlinuxgnueabi": {
+      "type": "toolchain",
+      "version": "~1.40802.0"
+    },
+    "framework-wiringpi": {
+      "type": "framework",
+      "optional": true,
+      "version": "~1.242.0"
+    },
+    "framework-artik-sdk": {
+      "type": "framework",
+      "optional": true,
+      "version": "*"
+    }
+  }
+}

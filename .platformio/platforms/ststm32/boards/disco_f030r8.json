@@ -1,0 +1,35 @@
+{
+  "build": {
+    "cpu": "cortex-m0",
+    "extra_flags": "-DSTM32F030x8",
+    "f_cpu": "48000000L",
+    "mcu": "stm32f030r8t6"
+  },
+  "debug": {
+    "default_tools": [
+      "stlink"
+    ],
+    "onboard_tools": [
+      "stlink"
+    ],
+    "openocd_board": "stm32f0discovery",
+    "openocd_target": "stm32f0x"
+  },
+  "frameworks": [
+    "mbed",
+    "stm32cube"
+  ],
+  "name": "ST STM32F0308DISCOVERY",
+  "upload": {
+    "maximum_ram_size": 8192,
+    "maximum_size": 65536,
+    "protocol": "stlink",
+    "protocols": [
+      "jlink",
+      "stlink",
+      "blackmagic"
+    ]
+  },
+  "url": "http://www.st.com/en/evaluation-tools/32f0308discovery.html",
+  "vendor": "ST"
+}

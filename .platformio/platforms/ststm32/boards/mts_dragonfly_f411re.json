@@ -1,0 +1,31 @@
+{
+  "build": {
+    "cpu": "cortex-m4",
+    "f_cpu": "100000000L",
+    "mcu": "stm32f411ret6"
+  },
+  "connectivity": [
+    "cellular"
+  ],
+  "debug": {
+    "openocd_target": "stm32f4x"
+  },
+  "frameworks": [
+    "mbed",
+    "stm32cube"
+  ],
+  "name": "MTS Dragonfly",
+  "upload": {
+    "maximum_ram_size": 131072,
+    "maximum_size": 524288,
+    "protocol": "mbed",
+    "protocols": [
+      "jlink",
+      "stlink",
+      "blackmagic",
+      "mbed"
+    ]
+  },
+  "url": "https://developer.mbed.org/platforms/MTS-Dragonfly/",
+  "vendor": "MultiTech"
+}

@@ -160,3 +160,4 @@ tmp/**
 .entropy/recent_searches
 .entropy/ws_cache
 .cordova
+.config/vivaldi

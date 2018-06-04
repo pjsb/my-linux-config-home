@@ -6,3 +6,7 @@ application/x-bzip-compressed-tar=org.gnome.FileRoller.desktop;
 application/zip=org.gnome.FileRoller.desktop;
 image/jpeg=shotwell-viewer.desktop;
 inode/directory=org.gnome.baobab.desktop;
+image/png=shotwell-viewer.desktop;shotwell.desktop;
+
+[Default Applications]
+image/png=shotwell.desktop

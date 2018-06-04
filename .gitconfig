@@ -19,3 +19,5 @@
 	recentrepo = /home/jpeters/Projekte/misa2/dlm/dlm
 [rerere]
 	enabled = true
+[cola]
+	spellcheck = false

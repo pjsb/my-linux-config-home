@@ -59,7 +59,7 @@ end
 -- -- This is used later as the default terminal and editor to run.
 browser = "google-chrome-stable"
 mail = "thunderbird"
-terminal = "terminator"
+terminal = "urxvt"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -82,6 +82,13 @@ awful.layout.layouts = {
     awful.layout.suit.max,
     awful.layout.suit.max.fullscreen,
 }
+
+--awful.tag.attached_connect_signal(s, "property::layout", function (t)
+--    local float = t.layout.name == "floating"
+--    for _,c in pairs(t:clients()) do
+--        c.floating = float
+--    end
+--end)
 -- }}}
 
 -- {{{ Helper functions
@@ -466,6 +473,10 @@ clientkeys = gears.table.join(
         end ,
         {description = "(un)maximize horizontally", group = "client"})
 )
+    -- Toggle titlebar
+--    awful.key({ modkey, "Control" }, "t",
+--      awful.titlebar.toggle
+--      {description = "Toggle title bar", group = "client"})
 
 -- Bind all key numbers to tags.
 -- Be careful: we use keycodes to make it work on any keyboard layout.
@@ -572,11 +583,11 @@ awful.rules.rules = {
 
     -- Add titlebars to normal clients and dialogs
     { rule_any = {type = { "normal", "dialog" }
-      }, properties = { titlebars_enabled = true }
+  }, properties = { eeh = true, titlebars_enabled = false }
     },
 
     -- get window class name with `xprop`
-    { rule = { class =  "Terminator" },
+    { rule = { class =  "URxvt" },
        properties = { titlebars_enabled = false } },
     { rule = { class =  "NetBeans IDE 8.2" },
       properties = { titlebars_enabled = false } },
@@ -653,6 +664,11 @@ client.connect_signal("request::titlebars", function(c)
         },
         layout = wibox.layout.align.horizontal
     }
+    -- Hide the menubar if we are not floating
+    --local l = awful.layout.get(c.screen)
+    --if not (l.name == "floating" or c.floating) then
+    --    awful.titlebar.hide(c)
+    --end
 end)
 
 -- Enable sloppy focus, so that focus follows mouse.
@@ -665,6 +681,14 @@ end)
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+
+--client.connect_signal("property::floating", function (c)
+--    if c.floating then
+--        awful.titlebar.show(c)
+--    else
+--        awful.titlebar.hide(c)
+--    end
+-- end)
 -- }}}
 
 awful.spawn("conky -d");
